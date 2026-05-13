@@ -1,0 +1,203 @@
+/* CATALOGO
+   Estilos de catalogo.html y también de marca.html,
+   porque comparten el buscador y algunas tarjetas.
+   Si tocas algo acá revisa que no se rompa en las dos páginas. */
+
+
+/* -- Sección catálogo
+   El bloque principal con el grid de marcas y el buscador. */
+.catalogo {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--gris-claro);
+}
+
+.catalogo-subtitulo {
+  color: var(--gris-medio);
+  margin-bottom: 30px;
+  font-size: 0.9375rem;    /* 15px */
+}
+
+
+/* -- Grid de marcas
+   Tres columnas fijas que se reducen a dos y luego a una
+   en los breakpoints de responsive. */
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+
+/* -- Tarjeta de marca
+   Al hacer hover sube, agrega borde ámbar y muestra
+   la franja "Ver productos →" que sube desde abajo con translateY. */
+.marca {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  box-shadow: var(--sombra-suave);
+  border: 2px solid transparent;
+  transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Franja ámbar que sube desde abajo al hacer hover */
+.marca::after {
+  content: "Ver productos →";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: var(--ambar);
+  color: var(--negro);
+  font-weight: 700;
+  font-size: 0.8125rem;    /* 13px */
+  padding: 8px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform var(--t);
+}
+
+.marca:hover::after { transform: translateY(0); }
+
+.marca:hover {
+  border-color: var(--ambar);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.15);
+}
+
+.marca img {
+  width: 130px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.marca h3 {
+  color: var(--negro);
+  margin-top: 10px;
+  font-size: 0.9375rem;    /* 15px */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* -- Resultados del buscador global
+   Grid de dos columnas que muestra las baterías encontradas
+   en todas las marcas al mismo tiempo. */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Tarjeta de resultado de búsqueda */
+.bateria {
+  background: var(--blanco);
+  width: 240px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: var(--sombra-suave);
+  text-align: center;
+  transition: transform var(--t), box-shadow var(--t);
+}
+
+.bateria:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-media);
+}
+
+.bateria img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.bateria h3 {
+  font-size: 1rem;         /* 16px */
+  margin: 10px 0;
+  color: var(--negro);
+}
+
+
+/* -- Buscador global
+   El input y botón centrados. El borde del input se vuelve
+   ámbar al hacer focus con un glow suave. */
+.buscador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.buscador h2 {
+  font-size: 1.375rem;     /* 22px */
+  font-weight: 700;
+  color: var(--negro);
+}
+
+.buscador-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.buscador input {
+  padding: 12px 16px;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 0.875rem;     /* 14px */
+  transition: border var(--t), box-shadow var(--t);
+}
+
+.buscador input:focus {
+  border-color: var(--ambar);
+  box-shadow: 0 0 5px rgba(245,166,35,0.4);
+}
+
+.buscador button {
+  padding: 12px 20px;
+  background: var(--ambar);
+  color: var(--negro);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.875rem;     /* 14px */
+  transition: background var(--t), transform var(--t);
+}
+
+.buscador button:hover {
+  background: var(--ambar-claro);
+  transform: translateY(-2px);
+}
+
+
+/* -- Responsive 768px
+   El grid de marcas pasa de 3 a 2 columnas.
+   Los resultados del buscador pasan a una columna.
+   El input ocupa casi todo el ancho. */
+@media (max-width: 768px) {
+  .marcas-grid { grid-template-columns: repeat(2, 1fr); }
+  .productos { grid-template-columns: 1fr; }
+  .bateria { width: 90%; }
+  .buscador input { width: 80%; }
+}
+
+/* -- Responsive 480px
+   En móviles pequeños el grid de marcas pasa a una sola columna. */
+@media (max-width: 480px) {
+  .marcas-grid { grid-template-columns: 1fr; }
+}

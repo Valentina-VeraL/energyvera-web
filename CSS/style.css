@@ -1,0 +1,761 @@
+/* Estilos globales — negro carbón, ámbar, dorado y crema
+   Aquí vive todo lo que se comparte entre las tres páginas.
+   Si tocas algo acá, afecta a index, catálogo y marca. */
+
+
+/* -- Reset
+   Limpia márgenes y rellenos por defecto del navegador,
+   y hace que el tamaño de los elementos incluya el borde (box-sizing). */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* -- Variables
+   Todos los colores, sombras, radios y tiempos de transición del sitio
+   están aquí. Si quieres cambiar el color principal, solo cambia --ambar.
+   --marca-color se sobreescribe dinámicamente desde marca.js con JS. */
+:root {
+  --negro:         #111111;
+  --carbon:        #1c1c1e;
+  --gris-oscuro:   #2a2a2a;
+  --gris-medio:    #555;
+  --gris-claro:    #f4f1ea;
+  --crema:         #faf7f0;
+  --blanco:        #ffffff;
+
+  --ambar:         #f5a623;
+  --ambar-claro:   #ffc346;
+  --dorado:        #d4a017;
+  --dorado-oscuro: #a07810;
+  --amarillo:      #fdcc39;
+  --amarillo-hover:#f5a623;
+
+  /* sobreescrita por JS en marca.html */
+  --marca-color:   #fdcc39;
+
+  --sombra-suave:  0 4px 20px rgba(0,0,0,0.10);
+  --sombra-media:  0 8px 32px rgba(0,0,0,0.18);
+  --sombra-fuerte: 0 20px 60px rgba(0,0,0,0.30);
+
+  --radio:     14px;
+  --radio-sm:  8px;
+  --t:         0.28s ease;
+}
+
+
+/* -- Base
+   font-size: 16px en el html es la base de todos los rem del sitio.
+   El botón de accesibilidad (btnFuente) modifica este valor con JS
+   para escalar todos los textos proporcionalmente. */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--crema);
+  color: var(--negro);
+  line-height: 1.6;
+}
+
+ul { list-style: none; }
+
+
+/* -- Tipografía
+   Todos los encabezados usan Poppins. Los tamaños están en rem
+   para que escalen cuando el usuario usa el botón de accesibilidad. */
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+
+.section-title {
+  display: inline-block;
+  font-size: 2.125rem;     /* 34px */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--negro);
+  margin-bottom: 8px;
+}
+/* La línea decorativa ámbar debajo de los títulos de sección */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ambar), var(--dorado));
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.section-sub {
+  font-size: 0.9375rem;    /* 15px */
+  color: var(--gris-medio);
+  margin-bottom: 48px;
+}
+
+
+/* -- Navbar
+   Sticky en la parte superior, siempre visible al hacer scroll.
+   El z-index 200 asegura que quede por encima de todo el contenido. */
+header {
+  background: var(--negro);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  border-bottom: 2px solid var(--ambar);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 64px;
+}
+
+/* Nombre de la empresa en el navbar */
+nav h2 {
+  font-size: 1.1875rem;    /* 19px */
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--ambar);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* Desactiva la línea decorativa que tienen los h2 globalmente */
+nav h2::after { display: none; }
+
+nav ul { display: flex; gap: 32px; }
+
+/* Links del navbar con subrayado animado al hacer hover */
+nav a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.8125rem;    /* 13px */
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  transition: color var(--t);
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--ambar);
+  transition: width var(--t);
+}
+nav a:hover { color: var(--ambar-claro); }
+nav a:hover::after { width: 100%; }
+
+
+/* -- Botón de accesibilidad
+   Aumenta el font-size del html con JS, lo que escala
+   todos los textos en rem proporcionalmente. */
+#btnFuente {
+  background: transparent;
+  border: 2px solid var(--ambar);
+  color: var(--ambar);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--t);
+}
+
+#btnFuente:hover {
+  background: var(--ambar);
+  color: var(--negro);
+}
+
+
+/* -- Sección CTA Marcas
+   El bloque negro con el título grande y el botón "Ver marcas".
+   Los dos radial-gradient del ::before son el efecto de luz de fondo. */
+.marcas-home {
+  text-align: center;
+  padding: 90px 20px;
+  background: var(--negro);
+  position: relative;
+  overflow: hidden;
+}
+
+.marcas-home::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 65% 55% at 20% 50%, rgba(245,166,35,0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 65% at 80% 50%, rgba(212,160,23,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.marcas-home h2 {
+  font-size: 3.125rem;     /* 50px */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--blanco);
+  margin-bottom: 14px;
+  position: relative;
+}
+.marcas-home h2::after { display: none; }
+
+/* La palabra en ámbar dentro del h2 ("marcas") */
+.marcas-home h2 em {
+  color: var(--ambar);
+  font-style: normal;
+}
+
+.marcas-home p {
+  color: #888;
+  font-size: 1rem;         /* 16px */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Botón principal con gradiente ámbar-dorado y sombra de color */
+.btn-marcas {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 42px;
+  background: linear-gradient(135deg, var(--ambar) 0%, var(--dorado) 100%);
+  color: var(--negro);
+  font-size: 1rem;         /* 16px */
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radio-sm);
+  box-shadow: 0 6px 28px rgba(245,166,35,0.38);
+  transition: transform var(--t), box-shadow var(--t);
+  position: relative;
+}
+
+.btn-marcas:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(245,166,35,0.48);
+  background: linear-gradient(135deg, var(--ambar-claro) 0%, var(--ambar) 100%);
+}
+
+
+/* -- Sección Servicios
+   Grid responsivo que acomoda las tarjetas automáticamente
+   según el ancho disponible. Cada tarjeta tiene borde izquierdo
+   que aparece en hover. */
+.servicios {
+  padding: 90px 20px;
+  text-align: center;
+  background: var(--crema);
+}
+
+.servicios ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicios ul li {
+  background: var(--blanco);
+  padding: 24px 22px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 0.9375rem;    /* 15px */
+  text-align: left;
+  border-left: 4px solid transparent;
+  transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+}
+
+.servicios ul li:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-media);
+  border-left-color: var(--ambar);
+}
+
+/* Íconos de Font Awesome en cada servicio */
+.servicios i {
+  color: var(--ambar);
+  font-size: 1.375rem;     /* 22px */
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+
+/* -- Sección Reseñas
+   Fondo negro con tarjetas oscuras. El ::before de cada tarjeta
+   es la comilla decorativa grande semitransparente. */
+.resenas {
+  padding: 90px 20px;
+  text-align: center;
+  background: var(--negro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resenas h2 {
+  color: var(--blanco);
+  font-size: 2.125rem;     /* 34px */
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.resenas h2::after {
+  content: '';
+  display: block;
+  width: 52px; height: 4px;
+  background: linear-gradient(90deg, var(--ambar), var(--dorado));
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.resenas-sub {
+  color: #777;
+  font-size: 0.9375rem;    /* 15px */
+  margin-bottom: 48px;
+  margin-top: 10px;
+}
+
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  width: 100%;
+}
+
+.resena-card {
+  background: var(--carbon);
+  border: 1px solid #2a2a2a;
+  border-radius: var(--radio);
+  padding: 28px 26px;
+  text-align: left;
+  position: relative;
+  transition: border-color var(--t), transform var(--t);
+}
+.resena-card:hover {
+  border-color: var(--ambar);
+  transform: translateY(-5px);
+}
+/* Comilla decorativa grande en la esquina superior izquierda */
+.resena-card::before {
+  content: '"';
+  font-size: 5rem;         /* 80px */
+  color: var(--ambar);
+  opacity: 0.18;
+  position: absolute;
+  top: -6px; left: 14px;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.resena-estrellas { color: var(--ambar); font-size: 0.8125rem; margin-bottom: 10px; }
+.resena-texto {
+  font-size: 0.875rem;     /* 14px */
+  color: #bbb;
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+.resena-autor {
+  font-size: 0.75rem;      /* 12px */
+  font-weight: 700;
+  color: var(--ambar);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* -- Sección FAQ
+   Acordeón hecho con CSS y JS puro. max-height: 0 con transición
+   es el truco para animar la apertura sin JS de altura. */
+.faq {
+  padding: 90px 20px;
+  background: var(--gris-claro);
+  text-align: center;
+}
+.faq h2 { color: var(--negro); }
+
+.faq-lista {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: var(--blanco);
+  border-radius: var(--radio-sm);
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+  border: 1px solid #e6e0d4;
+}
+
+.faq-pregunta {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9375rem;    /* 15px */
+  font-weight: 700;
+  color: var(--negro);
+  text-align: left;
+  gap: 12px;
+  transition: background var(--t);
+}
+.faq-pregunta:hover { background: #fdf9f0; }
+
+/* El ícono + que rota 45° para convertirse en × al abrir */
+.faq-icon {
+  color: var(--ambar);
+  font-size: 1rem;         /* 16px */
+  flex-shrink: 0;
+  transition: transform var(--t);
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* La respuesta usa max-height para animar apertura y cierre */
+.faq-respuesta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  font-size: 0.875rem;     /* 14px */
+  color: #555;
+  padding: 0 22px;
+  line-height: 1.7;
+}
+.faq-item.open .faq-respuesta {
+  max-height: 200px;
+  padding: 4px 22px 20px;
+}
+
+
+/* -- Sección Contacto
+   Tres tarjetas con ícono, fondo oscuro sobre negro.
+   El ::before es el efecto de luz sutil desde abajo. */
+#contacto {
+  padding: 90px 20px;
+  text-align: center;
+  background: var(--negro);
+  position: relative;
+  overflow: hidden;
+}
+#contacto::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 110%, rgba(245,166,35,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+#contacto h2 {
+  color: var(--blanco);
+  font-size: 2.125rem;     /* 34px */
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+#contacto h2::after {
+  content: '';
+  display: block;
+  width: 52px; height: 4px;
+  background: linear-gradient(90deg, var(--ambar), var(--dorado));
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.contacto-sub {
+  color: #777;
+  font-size: 0.9375rem;    /* 15px */
+  margin: 10px 0 50px;
+}
+
+.contacto-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.contacto-card {
+  background: var(--carbon);
+  border: 1px solid #2a2a2a;
+  border-radius: var(--radio);
+  padding: 30px 32px;
+  min-width: 210px;
+  flex: 1;
+  transition: border-color var(--t), transform var(--t);
+}
+.contacto-card:hover {
+  border-color: var(--ambar);
+  transform: translateY(-5px);
+}
+.contacto-card i {
+  font-size: 1.75rem;      /* 28px */
+  color: var(--ambar);
+  margin-bottom: 14px;
+  display: block;
+}
+.contacto-card p {
+  color: #aaa;
+  font-size: 0.875rem;     /* 14px */
+  line-height: 1.7;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: auto;
+  max-width: none;
+  transition: none;
+}
+.contacto-card:hover p { background: none; transform: none; }
+
+
+/* -- Footer
+   Simple y limpio. El span es el nombre de la empresa en ámbar. */
+footer {
+  background: #090909;
+  color: #555;
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 0.8125rem;    /* 13px */
+  letter-spacing: 0.5px;
+  border-top: 2px solid var(--ambar);
+}
+footer span { color: var(--ambar); font-weight: 700; }
+
+
+/* -- Botones flotantes
+   WhatsApp fijo abajo a la derecha. Al hacer click abre un menú
+   con los dos asesores. Facebook flota encima del botón de WhatsApp. */
+.wsp-float {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.wsp-btn {
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  border: none;
+  background: #25D366;
+  color: white;
+  font-size: 1.625rem;     /* 26px */
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  transition: transform var(--t), box-shadow var(--t);
+}
+.wsp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.5);
+}
+
+/* El menú se muestra/oculta con la clase .show que agrega botones.js */
+.wsp-menu {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  right: 68px; bottom: 0;
+}
+.wsp-menu a {
+  background: var(--ambar);
+  color: var(--negro);
+  padding: 10px 14px;
+  border-radius: var(--radio-sm);
+  text-decoration: none;
+  font-size: 0.8125rem;    /* 13px */
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: var(--sombra-suave);
+  transition: background var(--t);
+}
+.wsp-menu a:hover { background: var(--ambar-claro); }
+.wsp-menu.show { display: flex; }
+
+.fb-float {
+  position: fixed;
+  bottom: 96px; right: 24px;
+  z-index: 999;
+}
+.fb-btn {
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  background: #1877F2;
+  color: white;
+  font-size: 1.25rem;      /* 20px */
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(24,119,242,0.35);
+  transition: transform var(--t), box-shadow var(--t);
+}
+.fb-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 24px rgba(24,119,242,0.45);
+  background: #145dc0;
+}
+
+
+/* -- Animaciones
+   fadeUp es la entrada escalonada de las tarjetas de productos.
+   El delay se aplica inline desde marca.js. */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* -- Responsive 768px
+   En tablets el navbar apila verticalmente, el grid de reseñas
+   pasa a una columna y las tarjetas de contacto se apilan. */
+@media (max-width: 768px) {
+  nav { flex-direction: column; height: auto; padding: 14px 20px; gap: 12px; }
+  nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .marcas-home h2 { font-size: 2rem; }        /* 32px */
+  .resenas-grid { grid-template-columns: 1fr; }
+  .contacto-cards { flex-direction: column; }
+  .servicios ul li { font-size: 0.875rem; }   /* 14px */
+  .faq-lista { max-width: 95%; }
+}
+
+/* -- Responsive 480px
+   En móviles pequeños los títulos y botones reducen un poco más. */
+@media (max-width: 480px) {
+  .section-title { font-size: 1.625rem; }     /* 26px */
+  .btn-marcas { padding: 14px 28px; font-size: 0.875rem; } /* 14px */
+}
+
+
+/* -- Sección Video
+   El aspect-ratio 16/9 mantiene las proporciones del iframe
+   sin importar el ancho de pantalla. */
+.video-seccion {
+  padding: 90px 20px;
+  background: var(--negro);
+  text-align: center;
+}
+
+.video-seccion h2 {
+  color: var(--blanco);
+}
+.video-seccion .section-sub {
+  color: #888;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+  border: 2px solid #2a2a2a;
+  aspect-ratio: 16 / 9;
+}
+
+/* El iframe se posiciona absolute para llenar el contenedor 16/9 */
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-wrapper { border-radius: var(--radio-sm); }
+}
+
+
+/* -- Sección Mapa
+   El mapa de Google Maps embebido con un header decorativo.
+   En hover el borde se vuelve ámbar y el filtro de grises desaparece. */
+.mapa-seccion {
+  background: var(--negro);
+  padding: 0 20px 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa-wrapper {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 2px solid #2a2a2a;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+
+.mapa-wrapper:hover {
+  border-color: var(--ambar);
+  box-shadow: 0 28px 70px rgba(245,166,35,0.15);
+}
+
+/* Barra superior del mapa con ícono y texto */
+.mapa-header {
+  background: var(--carbon);
+  border-bottom: 2px solid var(--ambar);
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mapa-header i {
+  color: var(--ambar);
+  font-size: 1rem;         /* 16px */
+}
+
+.mapa-header span {
+  font-size: 0.8125rem;    /* 13px */
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+/* Filtro de grises suave que se quita al hacer hover en el wrapper */
+.mapa-frame {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter var(--t);
+}
+
+.mapa-wrapper:hover .mapa-frame {
+  filter: grayscale(0%) contrast(1.05);
+}
+
+@media (max-width: 768px) {
+  .mapa-frame { height: 260px; }
+}

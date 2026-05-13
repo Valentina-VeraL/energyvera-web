@@ -1,0 +1,114 @@
+/* CARRUSEL
+   Hero principal de index.html y catalogo.html.
+   La lógica del cambio automático entre slides está en carrusel.js.
+   Solo el slide con la clase .active es visible en cada momento. */
+
+
+/* -- Contenedor principal
+   overflow: hidden oculta los slides que no están activos
+   para que no aparezcan al lado del que sí se muestra. */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* -- Slide individual
+   Por defecto están ocultos con display: none.
+   carrusel.js agrega y quita la clase .active cada 4 segundos. */
+.carousel-slide {
+  display: none;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 650px;
+  position: relative;
+}
+
+/* El slide activo es el único visible */
+.carousel-slide.active {
+  display: block;
+}
+
+/* La imagen cubre todo el slide sin deformarse */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* -- Overlay
+   Capa semitransparente sobre la imagen.
+   El gradiente va de izquierda (más oscuro) a derecha (más claro)
+   para que el texto de la izquierda sea legible. */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  padding-right: 40px;
+  background: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+}
+
+
+/* -- Contenido del slide
+   Título y texto sobre la imagen. La animación fadeUp lo hace
+   entrar desde abajo cada vez que el slide se activa. */
+.carousel-content {
+  color: white;
+  max-width: 500px;
+  animation: fadeUp 1s ease;
+  text-align: left;
+}
+
+.carousel-title {
+  color: var(--ambar);
+  font-size: 3.25rem;      /* 52px */
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.carousel-text {
+  font-size: 1.125rem;     /* 18px */
+  font-weight: 700;
+  opacity: 0.9;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* --Carousel movil*/
+.carousel-img.movil  { 
+  display: none; }
+
+/* -- Responsive 768px
+   En móviles el slide es más bajo y el contenido
+   se centra en vez de alinearse a la izquierda. */
+@media (max-width: 768px) {
+  .carousel-slide { height: 450px; }
+  .carousel-img { object-position: center top; }
+
+  .carousel-overlay {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .carousel-title { font-size: 1.875rem; } /* 30px */
+  .carousel-text  { font-size: 0.875rem; } /* 14px */
+}
+
+.carousel-img.movil  { display: none; }
+
+@media (max-width: 768px) {
+  .carousel-img.desktop { display: none; }
+  .carousel-img.movil   { display: block; }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Marca - Energyvera</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/catalogo.css">
+    <link rel="stylesheet" href="CSS/marca.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>BATERIAS ENERGYVERA S.A.S</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html"> ← Volver al catálogo</a></li>
+        </ul>
+        <button id="btnFuente" onclick="cambiarFuente()" title="Cambiar tamaño de texto">A+</button>
+
+    </nav>
+</header>
+
+<!-- Botón WhatsApp -->
+<div class="wsp-float">
+  <button class="wsp-btn" id="wspBtn">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+  <div class="wsp-menu" id="wspMenu">
+    <a href="https://api.whatsapp.com/send?phone=573152168760" target="_blank">Asesor Jeison Vera</a>
+    <a href="https://api.whatsapp.com/send?phone=573102513489" target="_blank">Asesora Jazmin Vera</a>
+  </div>
+</div>
+
+<!-- Botón Facebook -->
+<div class="fb-float">
+  <a href="href="https://www.facebook.com/share/18U4XaW8nF/"" target="_blank" class="fb-btn">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+
+<!-- Hero de la marca -->
+<section class="marca-hero" id="marcaHero">
+    <div class="marca-hero-content">
+        <img id="marcaLogo" src="" alt="Logo marca" class="marca-logo-grande">
+        <div class="marca-hero-text">
+            <h1 id="marcaTitulo">Cargando...</h1>
+            <p id="marcaDesc" class="marca-descripcion"></p>
+            <span id="marcaCount" class="marca-badge"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Buscador dentro de la marca -->
+<section class="buscador buscador-marca">
+    <h2>Buscar en esta marca</h2>
+    <div class="buscador-row">
+        <input type="text" id="inputBusqueda" onkeyup="filtrarLocal()" placeholder="Ej: NS40, 70Ah...">
+        <button onclick="filtrarLocal()">Buscar</button>
+    </div>
+</section>
+
+<!-- Grid de productos -->
+<section class="catalogo catalogo-marca">
+    <div id="gridProductos" class="productos-marca-grid"></div>
+    <p id="sinResultados" class="sin-resultados" style="display:none;">
+        <i class="fas fa-search"></i> No se encontraron productos.
+    </p>
+</section>
+
+<!-- Modal de producto -->
+<div class="modal-overlay" id="modalOverlay" onclick="cerrarModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="cerrarModal()"><i class="fas fa-times"></i></button>
+        <img id="modalImg" src="" alt="">
+        <div class="modal-info">
+            <h2 id="modalNombre"></h2>
+            <p id="modalDesc"></p>
+            <div class="modal-specs" id="modalSpecs"></div>
+            <a id="modalWsp" href="#" target="_blank" class="btn-wsp-producto">
+                <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="JS/botones.js"></script>
+<script src="JS/marca.js"></script>
+<script>
+function cambiarFuente() {
+    const html   = document.documentElement;
+    const actual = parseFloat(html.style.fontSize) || 16;
+    html.style.fontSize = actual >= 22 ? '16px' : (actual + 2) + 'px';
+}
+</script>
+</body>
+</html>

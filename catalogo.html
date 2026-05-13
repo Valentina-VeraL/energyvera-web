@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Energyvera</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/catalogo.css">
+    <link rel="stylesheet" href="CSS/carrusel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>BATERIAS ENERGYVERA S.A.S</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+        </ul>
+        <button id="btnFuente" onclick="cambiarFuente()" title="Cambiar tamaño de texto">A+</button>
+    </nav>
+</header>
+
+<!--CARRUSEL-->
+<section class="hero-carousel">
+  <div class="carousel-slide active">
+    <img src="IMG/CARRUSEL/Carrusel01.jpg" class="carousel-img desktop" alt="Servicios de la empresa">
+    <img src="IMG/CARRUSEL/Carrusel01-movil.jpg" class="carousel-img movil" alt="Servicios de la empresa">
+    <div class="carousel-overlay"></div>
+  </div>
+  <div class="carousel-slide">
+    <img src="IMG/CARRUSEL/Carrusel02.jpg" class="carousel-img desktop" alt="Garantía respaldada">
+    <img src="IMG/CARRUSEL/Carrusel02-movil.jpg" class="carousel-img movil" alt="Garantía respaldada">
+    <div class="carousel-overlay"></div>
+  </div>
+</section>
+
+<!--BOTON WSP-->
+<div class="wsp-float">
+  <button class="wsp-btn" id="wspBtn"><i class="fab fa-whatsapp"></i></button>
+  <div class="wsp-menu" id="wspMenu">
+    <a href="https://api.whatsapp.com/send?phone=573152168760" target="_blank">Asesor Jeison Vera</a>
+    <a href="https://api.whatsapp.com/send?phone=573102513489" target="_blank">Asesora Jazmin Vera</a>
+  </div>
+</div>
+
+<div class="fb-float">
+  <a href="href="https://www.facebook.com/share/18U4XaW8nF/"" target="_blank" class="fb-btn"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<section class="buscador">
+    <h2>Buscar batería</h2>
+    <div class="buscador-row">
+        <input type="text" id="inputBusqueda" onkeyup="buscar()" placeholder="Buscar por nombre o marca...">
+        <button onclick="buscar()">Buscar</button>
+    </div>
+</section>
+
+<div id="resultados" class="productos"></div>
+
+<section class="catalogo">
+    <h1>Marcas disponibles</h1>
+    <p class="catalogo-subtitulo">Selecciona una marca para ver su catálogo completo</p>
+
+    <div class="marcas-grid">
+      <a class="marca" href="marca.html?marca=mac">
+        <img src="IMG/MAC/MAC.jpg" alt="Mac">
+        <h3>MAC</h3>
+      </a>
+
+      <a class="marca" href="marca.html?marca=duncan">
+        <img src="IMG/DUNCAN/DUNCAN.jpg" alt="Duncan">
+        <h3>DUNCAN</h3>
+      </a>
+      <a class="marca" href="marca.html?marca=varta">
+        <img src="IMG/VARTA/VARTA.jpg" alt="Varta">
+        <h3>VARTA</h3>
+      </a>
+      <a class="marca" href="marca.html?marca=bosch">
+        <img src="IMG/BOSCH/BOSCH.jpg" alt="Bosch">
+        <h3>BOSCH</h3>
+      </a>
+      <a class="marca" href="marca.html?marca=hella">
+        <img src="IMG/HELLA/HELLA.jpg" alt="Hella">
+        <h3>HELLA</h3>
+      </a>
+      <a class="marca" href="marca.html?marca=alphaline">
+        <img src="IMG/ALPHALINE/ALPHALINE.jpg" alt="Alphaline">
+        <h3>ALPHALINE</h3>
+      </a>
+      <a class="marca" href="marca.html?marca=hankook">
+        <img src="IMG/HANKOOK/HANKOOK.jpg" alt="Hankook">
+        <h3>HANKOOK</h3>
+      </a>
+      <a class="marca" href="marca.html?marca=moura">
+        <img src="IMG/MOURA/MOURA.jpg" alt="Moura">
+        <h3>MOURA</h3>
+      </a>
+
+    </div>
+</section>
+
+<script src="JS/marca.js"></script>
+<script src="JS/catalogo.js"></script>
+<script src="JS/carrusel.js"></script>
+<script src="JS/botones.js"></script>
+<script>
+  function cambiarFuente() {
+    const html   = document.documentElement;
+    const actual = parseFloat(html.style.fontSize) || 16;
+    html.style.fontSize = actual >= 22 ? '16px' : (actual + 2) + 'px';
+  }
+</script>
+
+</body>
+</html>

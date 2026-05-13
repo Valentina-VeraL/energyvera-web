@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BATERIAS ENERGYVERA S.A.S</title>
+  <link rel="stylesheet" href="CSS/carrusel.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--NAVBAR-->
+<header>
+  <nav>
+    <h2>BATERIAS ENERGYVERA S.A.S</h2>
+    <ul>
+      <li><a href="catalogo.html">Marcas</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button id="btnFuente" onclick="cambiarFuente()" title="Cambiar tamaño de texto">A+</button>
+  </nav>
+</header>
+
+<!--CARRUSEL-->
+<section class="hero-carousel">
+  <div class="carousel-slide active">
+    <img src="IMG/CARRUSEL/Carrusel01.jpg" class="carousel-img desktop" alt="Servicios de la empresa">
+    <img src="IMG/CARRUSEL/Carrusel01-movil.jpg" class="carousel-img movil" alt="Servicios de la empresa">
+    <div class="carousel-overlay"></div>
+  </div>
+  <div class="carousel-slide">
+    <img src="IMG/CARRUSEL/Carrusel02.jpg" class="carousel-img desktop" alt="Garantía respaldada">
+    <img src="IMG/CARRUSEL/Carrusel02-movil.jpg" class="carousel-img movil" alt="Garantía respaldada">
+    <div class="carousel-overlay"></div>
+  </div>
+</section>
+
+<!--CATALOGO MARCAS-->
+<section class="marcas-home">
+  <h2>Nuestras <em>marcas</em></h2>
+  <p>Distribuidor autorizado de las mejores baterías del mercado</p>
+  <a href="catalogo.html" class="btn-marcas">
+    <i class="fas fa-layer-group"></i> Ver marcas disponibles
+  </a>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios">
+  <h2 class="section-title">Servicios</h2>
+  <p class="section-sub">Todo lo que necesitas, en un solo lugar</p>
+  <ul>
+    <li><i class="fas fa-bolt"></i> Instalación gratis a domicilio, pago contraentrega</li>
+    <li><i class="fas fa-car-battery"></i> Diagnóstico del sistema eléctrico, arranque, fugas de corriente y alternador sin costo adicional</li>
+    <li><i class="fas fa-laptop-code"></i> Servicio escáner reconocimiento de batería para vehículo de alta gama</li>
+    <li><i class="fas fa-recycle"></i> Recibimos tu batería usada como parte de pago</li>
+    <li><i class="fas fa-shield-alt"></i> Garantía de Distribuidor Autorizado a Nivel Nacional</li>
+    <li><i class="fas fa-comments"></i> Asesoría técnica completa por teléfono o WhatsApp</li>
+    <li><i class="fas fa-plug"></i> Recarga de baterías para vehículos</li>
+    <li><i class="fas fa-tools"></i> Revisión mensual gratuita del sistema eléctrico para taxis y vehículos de transportes públicos</li>
+    <li><i class="fas fa-gift"></i> Por tu compra recibe silicona grande, aros antisulfatantes y seis revisiones anuales con escáner de batería gratis</li>
+    <li><i class="fas fa-toolbox"></i> Venta de llantas, plumillas, refrigerantes y bombillos</li>
+
+  </ul>
+</section>
+
+<!-- VIDEO -->
+<section class="video-seccion">
+  <h2 class="section-title">Conócenos</h2>
+  <p class="section-sub">Mira cómo trabajamos y lo que ofrecemos</p>
+
+  <div class="video-wrapper">
+
+    <iframe width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/HqXK4zaJukw?si=_fCs3egr5036qiB1" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="resenas">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <p class="resenas-sub">Más de 8 años de servicio en Bogotá y Cundinamarca</p>
+  <div class="resenas-grid">
+    <div class="resena-card">
+      <div class="resena-estrellas">★★★★★</div>
+<p class="resena-texto">Como empresa de transporte, valoramos la rapidez y eficiencia del servicio. Atendieron en sitio, diagnosticaron e instalaron la batería de forma inmediata. Muy confiables y recomendados.</p>      <span class="resena-autor">— TURBO CAMIONES COLOMBIA S.A.S</span>
+    </div>
+    <div class="resena-card">
+      <div class="resena-estrellas">★★★★★</div>
+      <p class="resena-texto">Muy buen servicio, llegan rápido y solucionan todo en el momento. Atención clara, cumplidos y confiables. Recomendados sin duda.</p>
+      <span class="resena-autor">— AGROLLANOS S.A.S</span>
+    </div>
+    <div class="resena-card">
+      <div class="resena-estrellas">★★★★★</div>
+      <p class="resena-texto">Buenos precios y atención de primera. Ya llevo varios años trabajando con ellos.</p>
+      <span class="resena-autor">— OTTE S.A.S</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <h2 class="section-title">Preguntas frecuentes</h2>
+  <p class="section-sub">Resolvemos tus dudas</p>
+
+  <div class="faq-lista">
+    <div class="faq-item">
+      <button class="faq-pregunta" onclick="toggleFaq(this)">
+        ¿Hacen domicilios?
+        <i class="fas fa-plus faq-icon"></i>
+      </button>
+      <div class="faq-respuesta">
+        Sí, realizamos entregas e instalación a domicilio en Bogotá y parte de Cundinamarca sin costo adicional.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pregunta" onclick="toggleFaq(this)">
+        ¿Las baterías tienen garantía?
+        <i class="fas fa-plus faq-icon"></i>
+      </button>
+      <div class="faq-respuesta">
+        Todas nuestras baterías cuentan con garantía directamente con nosotros como distribuidor autorizado.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pregunta" onclick="toggleFaq(this)">
+        ¿Qué métodos de pago manejan?
+        <i class="fas fa-plus faq-icon"></i>
+      </button>
+      <div class="faq-respuesta">
+        Efectivo, tarjetas débito y crédito, transferencias bancarias, Addi y Sistecredito.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p class="contacto-sub">Estamos disponibles para ayudarte</p>
+  <div class="contacto-cards">
+    <div class="contacto-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <p>Transversal 73 A Bis A # 36-99 Sur (Sobre la 1ra de mayo)<br>Kennedy, Bogotá</p>
+    </div>
+    <div class="contacto-card">
+      <i class="fas fa-phone-alt"></i>
+      <p>315 216 8760<br>310 251 3489</p>
+    </div>
+    <div class="contacto-card">
+      <i class="fas fa-envelope"></i>
+      <p>bateriasenergyvera<br>@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA -->
+<div class="mapa-seccion">
+  <div class="mapa-wrapper">
+    <div class="mapa-header">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Encuéntranos aquí</span>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8644746287537!2d-74.147925!3d4.618256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e97f93f43eb%3A0x19662b687ab24bd9!2zVHYuIDczYSBCaXMgQSAjIDM2LTk5LCBLZW5uZWR5LCBCb2dvdMOhLCBELkMuLCBCb2dvdMOhLCBCb2dvdMOhLCBELkMu!5e0!3m2!1ses-419!2sco!4v1778017292939!5m2!1ses-419!2sco"
+      class="mapa-frame"
+      loading="lazy"
+      allowfullscreen=""
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div> 
+
+<!-- BOTON WSP -->
+<div class="wsp-float">
+  <button class="wsp-btn" id="wspBtn">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+  <div class="wsp-menu" id="wspMenu">
+    <a href="https://api.whatsapp.com/send?phone=573152168760" target="_blank">Asesor Jeison Vera</a>
+    <a href="https://api.whatsapp.com/send?phone=573102513489" target="_blank">Asesora Jazmin Vera</a>
+  </div>
+</div>
+
+<!-- BOTÓN FACEBOOK -->
+<div class="fb-float">
+  <a href="https://www.facebook.com/share/18U4XaW8nF/" target="_blank" class="fb-btn">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2016 <span>BATERIAS ENERGYVERA S.A.S</span> — Todos los derechos reservados</p>
+</footer>
+
+<script src="JS/carrusel.js"></script>
+<script src="JS/botones.js"></script>
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+//aumentar tamaño del texto
+function cambiarFuente() {
+  const html   = document.documentElement;
+  const actual = parseFloat(html.style.fontSize) || 16;
+  html.style.fontSize = actual >= 22 ? '16px' : (actual + 2) + 'px';
+}
+
+</script>
+
+</body>
+</html>
