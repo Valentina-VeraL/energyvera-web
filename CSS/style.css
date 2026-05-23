@@ -110,7 +110,7 @@ nav {
 
 /* Nombre de la empresa en el navbar */
 nav h2 {
-  font-size: 1.1875rem;    /* 19px */
+  font-size: 1.80rem;    /* 28px */
   font-weight: 800;
   letter-spacing: 1.5px;
   color: var(--ambar);
@@ -127,13 +127,26 @@ nav ul { display: flex; gap: 32px; }
 nav a {
   color: #bbb;
   text-decoration: none;
-  font-size: 0.8125rem;    /* 13px */
+  font-size: 0.9375rem;    /* 13px */
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   position: relative;
   transition: color var(--t);
 }
+
+nav a[href="catalogo.html"],
+nav a[href="#faq"],
+nav a[href="#contacto"] {
+  color: var(--blanco);
+}
+
+nav a[href="catalogo.html"]:hover,
+nav a[href="#faq"]:hover,
+nav a[href="#contacto"]:hover {
+  color: var(--ambar-claro);
+}
+
 nav a::after {
   content: '';
   position: absolute;
@@ -185,7 +198,7 @@ nav a:hover::after { width: 100%; }
 }
 
 .marcas-home h2 {
-  font-size: 3.125rem;     /* 50px */
+  font-size: 1.60rem;     /* 30px */
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -202,8 +215,8 @@ nav a:hover::after { width: 100%; }
 }
 
 .marcas-home p {
-  color:var(--gris-medio);
-  font-size: 1rem;         /* 16px */
+  color:var(--negro);
+  font-size: 0.800rem;         /* 12px */
   margin-bottom: 40px;
   position: relative;
 }
@@ -239,6 +252,15 @@ nav a:hover::after { width: 100%; }
   padding: 90px 20px;
   text-align: center;
   background: var(--carbon);
+}
+
+.servicios h2 {
+  color: var(--blanco);
+  font-size: 1.60rem;
+}
+
+.servicios .section-sub {
+  color: var(--blanco);
 }
 
 .servicios ul {
@@ -278,6 +300,53 @@ nav a:hover::after { width: 100%; }
   margin-top: 2px;
 }
 
+/* -- Sección Video */
+.video-seccion {
+  padding: 90px 20px;
+  background: var(--crema);
+  text-align: center;
+}
+
+.video-seccion h2 {
+  color: var(--negro);
+  font-size: 1.60rem;
+}
+
+.video-seccion p {
+  color: var(--negro)
+}
+
+.video-seccion .section-sub {
+  color: var(--negro);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: var(--radio);
+  border-color: #d4c9b0;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+  border: 2px solid #fbc02d;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-wrapper { border-radius: var(--radio-sm); }
+}
+
 /* -- Sección Reseñas */
 .resenas {
   padding: 90px 20px;
@@ -290,7 +359,7 @@ nav a:hover::after { width: 100%; }
 
 .resenas h2 {
   color: var(--blanco);
-  font-size: 2.125rem;     /* 34px */
+  font-size: 1.60rem;     /* 34px */
   font-weight: 800;
   margin-bottom: 6px;
 }
@@ -303,11 +372,19 @@ nav a:hover::after { width: 100%; }
   margin: 10px auto 0;
 }
 
+.resenas-texto{
+  color: var(--blanco);
+}
+
 .resenas-sub {
-  color: #777;
+  color: var(--blanco);
   font-size: 0.9375rem;    /* 15px */
   margin-bottom: 48px;
   margin-top: 10px;
+}
+
+.resenas .resenas-sub {
+  color: var(--blanco);
 }
 
 .resenas-grid {
@@ -346,7 +423,7 @@ nav a:hover::after { width: 100%; }
 .resena-estrellas { color: var(--ambar); font-size: 0.8125rem; margin-bottom: 10px; }
 .resena-texto {
   font-size: 0.875rem;     /* 14px */
-  color: #bbb;
+  color:var(--blanco);
   font-style: italic;
   line-height: 1.7;
   margin-bottom: 18px;
@@ -361,7 +438,6 @@ nav a:hover::after { width: 100%; }
   text-transform: uppercase;
 }
 
-
 /* -- Sección FAQ
    Acordeón hecho con CSS y JS */
 .faq {
@@ -369,7 +445,9 @@ nav a:hover::after { width: 100%; }
   background: var(--gris-claro);
   text-align: center;
 }
-.faq h2 { color: var(--negro); }
+.faq h2 { color: var(--negro); 
+font-size: 1.60rem;
+}
 
 .faq-lista {
   max-width: 700px;
@@ -383,7 +461,15 @@ nav a:hover::after { width: 100%; }
   margin-bottom: 10px;
   overflow: hidden;
   box-shadow: var(--sombra-suave);
-  border: 1px solid #e6e0d4;
+  border: 1px solid var(--blanco);
+}
+
+.faq .section-sub { 
+  color: var(--negro); 
+}
+
+.faq-respuesta { 
+  color: var(--negro); 
 }
 
 .faq-pregunta {
@@ -419,7 +505,7 @@ nav a:hover::after { width: 100%; }
   overflow: hidden;
   transition: max-height 0.35s ease, padding 0.3s ease;
   font-size: 0.875rem;     /* 14px */
-  color: #555;
+  color: var(--negro);
   padding: 0 22px;
   line-height: 1.7;
 }
@@ -427,7 +513,6 @@ nav a:hover::after { width: 100%; }
   max-height: 200px;
   padding: 4px 22px 20px;
 }
-
 
 /* -- Sección Contacto */
 #contacto {
@@ -446,7 +531,7 @@ nav a:hover::after { width: 100%; }
 
 #contacto h2 {
   color: var(--blanco);
-  font-size: 2.125rem;     /* 34px */
+  font-size: 1.60rem;     /* 34px */
   font-weight: 800;
   margin-bottom: 6px;
 }
@@ -460,7 +545,7 @@ nav a:hover::after { width: 100%; }
 }
 
 .contacto-sub {
-  color: #777;
+  color: var(--blanco);
   font-size: 0.9375rem;    /* 15px */
   margin: 10px 0 50px;
 }
@@ -494,7 +579,7 @@ nav a:hover::after { width: 100%; }
   display: block;
 }
 .contacto-card p {
-  color: #aaa;
+  color: var(--blanco);
   font-size: 0.875rem;     /* 14px */
   line-height: 1.7;
   background: none;
@@ -507,6 +592,69 @@ nav a:hover::after { width: 100%; }
 }
 .contacto-card:hover p { background: none; transform: none; }
 
+/* -- Sección Mapa */
+.mapa-seccion {
+  background: var(--negro);
+  padding: 0 20px 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa-wrapper {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 2px solid #2a2a2a;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+
+.mapa-wrapper:hover {
+  border-color: var(--ambar);
+  box-shadow: 0 28px 70px rgba(245,166,35,0.15);
+}
+
+/* --Barra superior del mapa con ícono y texto */
+.mapa-header {
+  background: var(--carbon);
+  border-bottom: 2px solid var(--ambar);
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mapa-header i {
+  color: var(--ambar);
+  font-size: 1rem;        
+}
+
+.mapa-header span {
+  font-size: 0.8125rem;   
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+
+/* --Filtro de grises suave que se quita al hacer hover en el wrapper */
+.mapa-frame {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter var(--t);
+}
+
+.mapa-wrapper:hover .mapa-frame {
+  filter: grayscale(0%) contrast(1.05);
+}
+
+@media (max-width: 768px) {
+  .mapa-frame { height: 260px; }
+}
 
 /* -- Footer*/
   footer {
@@ -592,118 +740,10 @@ footer span { color: var(--negro); font-weight: 700; }
   background: #145dc0;
 }
 
-
 /* -- Animaciones*/
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-
-/* -- Sección Video */
-.video-seccion {
-  padding: 90px 20px;
-  background: var(--crema);
-  text-align: center;
-}
-
-.video-seccion h2 {
-  color: var(--negro);
-}
-.video-seccion .section-sub {
-  color: var(--gris-medio);
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 860px;
-  margin: 0 auto;
-  border-radius: var(--radio);
-  border-color: #d4c9b0;
-  overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
-  border: 2px solid #2a2a2a;
-  aspect-ratio: 16 / 9;
-}
-
-.video-wrapper iframe,
-.video-wrapper video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .video-wrapper { border-radius: var(--radio-sm); }
-}
-
-
-/* -- Sección Mapa */
-.mapa-seccion {
-  background: var(--negro);
-  padding: 0 20px 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.mapa-wrapper {
-  width: 100%;
-  max-width: 900px;
-  border-radius: var(--radio);
-  overflow: hidden;
-  border: 2px solid #2a2a2a;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
-  transition: border-color var(--t), box-shadow var(--t);
-}
-
-.mapa-wrapper:hover {
-  border-color: var(--ambar);
-  box-shadow: 0 28px 70px rgba(245,166,35,0.15);
-}
-
-/* --Barra superior del mapa con ícono y texto */
-.mapa-header {
-  background: var(--carbon);
-  border-bottom: 2px solid var(--ambar);
-  padding: 14px 22px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.mapa-header i {
-  color: var(--ambar);
-  font-size: 1rem;        
-}
-
-.mapa-header span {
-  font-size: 0.8125rem;   
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #ccc;
-}
-
-/* --Filtro de grises suave que se quita al hacer hover en el wrapper */
-.mapa-frame {
-  width: 100%;
-  height: 380px;
-  border: none;
-  display: block;
-  filter: grayscale(20%) contrast(1.05);
-  transition: filter var(--t);
-}
-
-.mapa-wrapper:hover .mapa-frame {
-  filter: grayscale(0%) contrast(1.05);
-}
-
-@media (max-width: 768px) {
-  .mapa-frame { height: 260px; }
 }
 
 /* -- Responsive 768px */
