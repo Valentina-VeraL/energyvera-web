@@ -308,6 +308,12 @@ if (!info) {
   renderProductos(productos);
 }
 
+// Si viene un producto específico en la URL, abre su modal automáticamente
+const productoIdx = params.get("producto");
+if (productoIdx !== null) {
+  // Espera a que los productos rendericen antes de abrir el modal
+  setTimeout(() => abrirModal(parseInt(productoIdx)), 300);
+}
 
 // -- Render de productos
 // Recibe un array de productos y los convierte en tarjetas html

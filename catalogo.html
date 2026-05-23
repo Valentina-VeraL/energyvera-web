@@ -14,7 +14,7 @@
 
 <header>
     <nav>
-        <h2><img src="IMG/LOGO/LOGO_energyvera.png" alt="Logo Baterias EnergyVera S.A.S" class="nav-logo"></h2>
+        <h2><a href="index.html"><img src="IMG/LOGO/LOGO_energyvera.png" alt="Logo Baterias EnergyVera S.A.S" class="nav-logo"></a></h2>
         <ul>
             <li><a href="index.html">Inicio</a></li>
         </ul>
@@ -34,6 +34,9 @@
     <img src="IMG/CARRUSEL/Carrusel02-movil.jpg" class="carousel-img movil" alt="Garantía respaldada">
     <div class="carousel-overlay"></div>
   </div>
+
+  <button class="carousel-btn prev" onclick="cambiarManual(-1)">&#8249;</button>
+  <button class="carousel-btn next" onclick="cambiarManual(1)">&#8250;</button>
 </section>
 
 <!--BOTON WSP-->
@@ -101,10 +104,11 @@
     </div>
 </section>
 
-<script src="JS/marca.js"></script>
-<script src="JS/catalogo.js"></script>
 <script src="JS/carrusel.js"></script>
 <script src="JS/botones.js"></script>
+<script src="JS/marca.js"></script>
+<script src="JS/catalogo.js"></script>
+
 <script>
   function cambiarFuente() {
     const html   = document.documentElement;

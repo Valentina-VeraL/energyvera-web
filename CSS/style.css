@@ -1,7 +1,6 @@
 /* Estilos globales — negro carbón, ámbar, dorado y crema
 index, catálogo y marca. */
 
-
 /* -- Reset
    Limpia márgenes y rellenos por defecto del navegador */
 *, *::before, *::after {
@@ -42,7 +41,6 @@ index, catálogo y marca. */
   --t:         0.28s ease;
 }
 
-
 /* -- Base*/
 html {
   scroll-behavior: smooth;
@@ -56,11 +54,13 @@ body {
   line-height: 1.6;
 }
 
-ul { list-style: none; }
+ul { 
+  list-style: none; }
 
 
 /* -- Tipografía */
-h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+h1, h2, h3, h4 { 
+  font-family: 'Poppins', sans-serif; }
 
 .section-title {
   display: inline-block;
@@ -124,9 +124,17 @@ nav h2 {
 }
 
 /* Desactiva la línea decorativa que tienen los h2 globalmente */
-nav h2::after { display: none; }
+nav h2::after { 
+  display: none; }
 
-nav ul { display: flex; gap: 32px; }
+nav ul { 
+  display: flex; gap: 32px; }
+
+/*Logo*/
+nav h2 a {
+  text-decoration: none;
+  display: inline-flex;
+}
 
 /* Links del navbar*/
 nav a {
@@ -670,7 +678,7 @@ font-size: 1.60rem;
   background: linear-gradient(135deg, var(--ambar) 0%, var(--ambar) 100%);
   color:var(--blanco);
   text-align: center;
-  padding: 28px 20px;
+  padding: 20px 20px;
   font-size: 0.8125rem;    /* 13px */
   letter-spacing: 0.5px;
   border-top: 2px solid var(--dorado);

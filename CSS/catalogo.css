@@ -103,26 +103,30 @@ a.marca {
 /* -- Resultados del buscador global*/
 .productos {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 960px;
   justify-items: center;
   margin-top: 20px;
+  margin: 0 auto 40px;
 }
 
 /* Tarjetas de resultado de búsqueda */
 .bateria {
-  background: var(--blanco);
-  width: 240px;
-  border-radius: 15px;
+  background: var(--carbon);
+  border: 1px solid #2a2a2a;
+  width: 100%;
+  border-radius: var(--radio);
   padding: 15px;
   box-shadow: var(--sombra-suave);
   text-align: center;
-  transition: transform var(--t), box-shadow var(--t);
+  transition: border-color var(--t), transform var(--t);
 }
 
 .bateria:hover {
-  transform: translateY(-6px);
+  border-color: var(--ambar);
   box-shadow: var(--sombra-media);
+  transform: translateY(-6px);
 }
 
 .bateria img {
@@ -134,7 +138,57 @@ a.marca {
 .bateria h3 {
   font-size: 1rem;         /* 16px */
   margin: 10px 0;
-  color: var(--negro);
+  color: var(--blanco);
+}
+
+/*-- Info baterias modal */
+.bateria-desc {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin: 8px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;    /* máximo 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bateria-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.bateria-specs span {
+  background: var(--negro);
+  color: #ccc;
+  font-size: 0.70rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid #3a3a3a;
+}
+
+.bateria-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.bateria-marca {
+  font-size: 0.70rem;
+  font-weight: 700;
+  color: var(--ambar);
+  letter-spacing: 1px;
+}
+
+.bateria-cta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ambar);
 }
 
 /* -- Buscador global */
@@ -145,6 +199,7 @@ a.marca {
   gap: 12px;
   text-align: center;
   padding: 30px 20px;
+  background: var(--crema);
 }
 
 .buscador h2 {
@@ -197,7 +252,7 @@ a.marca {
 /* -- Responsive 768px */
 @media (max-width: 768px) {
   .marcas-grid { grid-template-columns: repeat(2, 1fr); }
-  .productos { grid-template-columns: 1fr; }
+  .productos { grid-template-columns: repeat(2, 1fr); }
   .bateria { width: 90%; }
   .buscador input { width: 80%; }
 }
