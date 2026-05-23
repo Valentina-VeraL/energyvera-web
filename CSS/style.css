@@ -105,17 +105,22 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 28px;
-  height: 64px;
+  height: 83px;
 }
 
 /* Nombre de la empresa en el navbar */
+.nav-logo {
+  height: 65px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 nav h2 {
-  font-size: 1.80rem;    /* 28px */
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  color: var(--ambar);
-  text-transform: uppercase;
-  margin-bottom: 0;
+  margin-right: 0; 
+  margin-left: 0;
+  padding-left: 0;
+
 }
 
 /* Desactiva la línea decorativa que tienen los h2 globalmente */
@@ -171,6 +176,10 @@ nav a:hover::after { width: 100%; }
   border-radius: 8px;
   cursor: pointer;
   transition: all var(--t);
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 999;
 }
 
 #btnFuente:hover {
