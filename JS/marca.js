@@ -1,13 +1,13 @@
 // MARCA
-// Tiene tres responsabilidades: guardar todos los datos del catálogo,
-// arrancar la página según la marca que viene en la URL,
+// Tiene tres responsabilidades: guarda todos los datos del catalogo,
+// arrancar la página segun la marca que viene en la URL,
 // y manejar las interacciones del buscador local y el modal.
 
 
 // -- Datos de productos
-// Todos los productos de todas las marcas viven acá.
+// Todos los productos de todas las marcas estan aca
 // El buscador global de catalogo.js y las páginas individuales
-// de cada marca se alimentan de este mismo array.
+// de cada marca se forman parte de este mismo array.
 const todoProductos = [
 
   // -- MAC
@@ -269,7 +269,6 @@ const todoProductos = [
 // -- Info de cada marca
 // Logo, descripción y color de acento por marca.
 // El color se aplica dinámicamente a --marca-color en el CSS.
-// Para agregar una marca nueva: agrega su clave acá y sus productos arriba.
 const infoMarcas = {
   mac:       { nombre: "MAC",       logo: "IMG/MAC/MAC.jpg",             desc: "Baterías MAC, alto rendimiento y durabilidad para el mercado colombiano, disponibles en líneas Silver, Gold y AGM.", color: "#f5a623" },
   duncan:    { nombre: "DUNCAN",    logo: "IMG/DUNCAN/DUNCAN.jpg",       desc: "Baterías colombianas de excelente relación calidad-precio. Ideales para el mercado nacional.",                   color: "#f5a623" },
@@ -283,9 +282,6 @@ const infoMarcas = {
 
 
 // -- Arranque de la página
-// Lee el parámetro ?marca= de la URL, por ejemplo marca.html?marca=mac
-// devuelve "mac". Si no existe o no coincide con ninguna clave
-// de infoMarcas, muestra "Marca no encontrada" y para ahí.
 const params   = new URLSearchParams(window.location.search);
 const marcaKey = (params.get("marca") || "").toLowerCase();
 const info     = infoMarcas[marcaKey];
@@ -299,14 +295,12 @@ if (!info) {
   document.getElementById("marcaTitulo").textContent  = info.nombre;
   document.getElementById("marcaDesc").textContent    = info.desc;
 
-  // Cambia el título de la pestaña del navegador
+  // Cambia el titulo de la pestaña del navegador
   document.title = `${info.nombre} — Energyvera`;
 
-  // Sobreescribe --marca-color en el CSS con el color de esta marca
-  // Esto cambia el borde del hero, los botones y los bordes de imagen
   document.documentElement.style.setProperty("--marca-color", info.color);
 
-  // Filtra solo los productos de esta marca y cuenta cuántos hay
+  // Filtra solo los productos de esta marca y ve cuantos hay
   const productos = todoProductos.filter(p => p.marca === marcaKey);
   document.getElementById("marcaCount").textContent =
     `${productos.length} referencia${productos.length !== 1 ? "s" : ""} disponible${productos.length !== 1 ? "s" : ""}`;
@@ -316,11 +310,9 @@ if (!info) {
 
 
 // -- Render de productos
-// Recibe un array de productos y los convierte en tarjetas HTML.
-// El animation-delay inline crea el efecto de entrada escalonada:
-// cada tarjeta aparece 70ms después de la anterior.
+// Recibe un array de productos y los convierte en tarjetas html
 // indexOf busca el índice global del producto en todoProductos
-// para pasárselo al modal y que sepa qué producto mostrar.
+// para pasarselo al modal y que sepa que producto mostrar.
 function renderProductos(lista) {
   const grid   = document.getElementById("gridProductos");
   const sinRes = document.getElementById("sinResultados");
@@ -352,7 +344,7 @@ function renderProductos(lista) {
 
 // -- Filtro local
 // Se llama con cada tecla que el usuario presiona en el buscador.
-// A diferencia del buscador global, este busca también en descripción
+// este busca también en descripción
 // y en todos los valores de specs, no solo en nombre y marca.
 function filtrarLocal() {
   const q    = document.getElementById("inputBusqueda").value.toLowerCase();
@@ -369,12 +361,9 @@ function filtrarLocal() {
 
 
 // -- Modal
-// Recibe el índice global del producto en todoProductos,
-// llena el modal con sus datos y lo abre agregando la clase .active.
+// Recibe el índice global del producto en todoProductos
 // El link de WhatsApp usa encodeURIComponent para que el nombre
 // del producto con tildes y espacios no rompa la URL.
-// overflow: hidden en el body evita que el fondo haga scroll
-// mientras el modal está abierto.
 function abrirModal(idx) {
   const p = todoProductos[idx];
 
@@ -401,5 +390,5 @@ function cerrarModal() {
   document.body.style.overflow = "";
 }
 
-// También se puede cerrar presionando Escape
+// Tambien se puede cerrar presionando Escape
 document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarModal(); });

@@ -1,22 +1,15 @@
-/* CARRUSEL
-   Hero principal de index.html y catalogo.html.
-   La lógica del cambio automático entre slides está en carrusel.js.
-   Solo el slide con la clase .active es visible en cada momento. */
+/* CARRUSEL */
 
 
-/* -- Contenedor principal
-   overflow: hidden oculta los slides que no están activos
-   para que no aparezcan al lado del que sí se muestra. */
+/* -- Contenedor principal */
 .hero-carousel {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 
-/* -- Slide individual
-   Por defecto están ocultos con display: none.
-   carrusel.js agrega y quita la clase .active cada 4 segundos. */
+/* -- Slide individual */
 .carousel-slide {
   display: none;
   height: 70vh;
@@ -40,9 +33,7 @@
 
 
 /* -- Overlay
-   Capa semitransparente sobre la imagen.
-   El gradiente va de izquierda (más oscuro) a derecha (más claro)
-   para que el texto de la izquierda sea legible. */
+   Capa semitransparente sobre la imagen */
 .carousel-overlay {
   position: absolute;
   inset: 0;
@@ -55,9 +46,7 @@
 }
 
 
-/* -- Contenido del slide
-   Título y texto sobre la imagen. La animación fadeUp lo hace
-   entrar desde abajo cada vez que el slide se activa. */
+/* -- Contenido del slide */
 .carousel-content {
   color: white;
   max-width: 500px;
@@ -84,13 +73,40 @@
   line-height: 1.4;
 }
 
-/* --Carousel movil*/
-.carousel-img.movil  { 
-  display: none; }
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--ambar);
+  color: var(--ambar);
+  font-size: 2.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--t), transform var(--t);
+  line-height: 1;
+}
 
-/* -- Responsive 768px
-   En móviles el slide es más bajo y el contenido
-   se centra en vez de alinearse a la izquierda. */
+.carousel-btn:hover {
+  background: var(--ambar);
+  color: var(--negro);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: 20px; }
+.carousel-btn.next { right: 20px; }
+
+@media (max-width: 768px) {
+  .carousel-btn { width: 38px; height: 38px; font-size: 1.75rem; }
+}
+
+/* -- Responsive 768px */
 @media (max-width: 768px) {
   .carousel-slide { height: 450px; }
   .carousel-img { object-position: center top; }
@@ -106,6 +122,7 @@
   .carousel-text  { font-size: 0.875rem; } /* 14px */
 }
 
+/*-- Carousel movil*/
 .carousel-img.movil  { display: none; }
 
 @media (max-width: 768px) {

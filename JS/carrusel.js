@@ -1,31 +1,42 @@
 // CARRUSEL
-// Cambia automáticamente entre slides cada 4 segundos.
-// El primer slide ya tiene la clase .active en el HTML,
-// así que es visible desde antes de que este script corra.
 
-
+// Espera a que toda la página cargue antes de arrancar
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Agarra todos los slides del carrusel
   const slides = document.querySelectorAll(".carousel-slide");
 
-  // Si no hay slides en esta página no hace nada y evita errores
+  // si no hay slides en la pagina retorna
   if (!slides.length) return;
 
-  // Arranca en 0 porque el primer slide ya está activo en el HTML
+  // indice del slide que esta activo
   let index = 0;
 
   function cambiarSlide() {
-    // Quita .active de todos los slides
+    // Le quita .active a todos los slides para "apagarlos"
     slides.forEach(slide => slide.classList.remove("active"));
 
-    // Avanza al siguiente, y si llegó al último vuelve al primero
+    // Avanzamos al siguiente — el % hace que cuando llegue al ultimo
+    // vuelva automaticamente al primero
     index = (index + 1) % slides.length;
 
-    // Activa el nuevo slide
+    // Le ponemos .active al nuevo slide para mostrarlo
     slides[index].classList.add("active");
   }
 
-  // Cambia cada 4 segundos
+  // cambia cada 4 segundos automáticamente
   setInterval(cambiarSlide, 4000);
+
+  // Esta función la usamos cuando el usuario hace clic en las flechas
+  // direccion es +1 (siguiente) o -1 (anterior)
+  window.cambiarManual = function(direccion) {
+    // Apagamos todos igual que antes
+    slides.forEach(slide => slide.classList.remove("active"));
+
+    index = (index + direccion + slides.length) % slides.length;
+
+    // Mostramos el slide correspondiente
+    slides[index].classList.add("active");
+  }
 
 });

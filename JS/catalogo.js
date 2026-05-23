@@ -1,17 +1,15 @@
 // CATALOGO
-// Buscador global que filtra en todos los productos de todas las marcas.
-// Se llama con onkeyup desde el input en catalogo.html,
-// así busca en tiempo real sin necesidad de botón.
+// Buscador global funciona en tiempo real
 
 
 function buscar() {
   const q          = document.getElementById("inputBusqueda").value.toLowerCase().trim();
   const contenedor = document.getElementById("resultados");
 
-  // Si el contenedor no existe en la página, no hace nada
+  // Si el contenedor no existe en la pagina, no hace nada
   if (!contenedor) return;
 
-  // Si el input está vacío limpia los resultados y para
+  // Si el input esta vacio limpia los resultados y para
   if (!q) {
     contenedor.innerHTML = "";
     return;
