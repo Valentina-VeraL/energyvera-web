@@ -1,11 +1,9 @@
 /* Estilos globales — negro carbón, ámbar, dorado y crema
-   Aquí vive todo lo que se comparte entre las tres páginas.
-   Si tocas algo acá, afecta a index, catálogo y marca. */
+index, catálogo y marca. */
 
 
 /* -- Reset
-   Limpia márgenes y rellenos por defecto del navegador,
-   y hace que el tamaño de los elementos incluya el borde (box-sizing). */
+   Limpia márgenes y rellenos por defecto del navegador */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -14,8 +12,7 @@
 
 
 /* -- Variables
-   Todos los colores, sombras, radios y tiempos de transición del sitio
-   están aquí. Si quieres cambiar el color principal, solo cambia --ambar.
+   colores, sombras, radios y tiempos de transición
    --marca-color se sobreescribe dinámicamente desde marca.js con JS. */
 :root {
   --negro:         #111111;
@@ -46,10 +43,7 @@
 }
 
 
-/* -- Base
-   font-size: 16px en el html es la base de todos los rem del sitio.
-   El botón de accesibilidad (btnFuente) modifica este valor con JS
-   para escalar todos los textos proporcionalmente. */
+/* -- Base*/
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -65,9 +59,7 @@ body {
 ul { list-style: none; }
 
 
-/* -- Tipografía
-   Todos los encabezados usan Poppins. Los tamaños están en rem
-   para que escalen cuando el usuario usa el botón de accesibilidad. */
+/* -- Tipografía */
 h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 
 .section-title {
@@ -79,7 +71,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
   color: var(--negro);
   margin-bottom: 8px;
 }
-/* La línea decorativa ámbar debajo de los títulos de sección */
+/* La línea decorativa ambar debajo de los títulos de sección */
 .section-title::after {
   content: '';
   display: block;
@@ -97,9 +89,7 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 }
 
 
-/* -- Navbar
-   Sticky en la parte superior, siempre visible al hacer scroll.
-   El z-index 200 asegura que quede por encima de todo el contenido. */
+/* -- Navbar */
 header {
   background: var(--negro);
   position: sticky;
@@ -133,7 +123,7 @@ nav h2::after { display: none; }
 
 nav ul { display: flex; gap: 32px; }
 
-/* Links del navbar con subrayado animado al hacer hover */
+/* Links del navbar*/
 nav a {
   color: #bbb;
   text-decoration: none;
@@ -156,9 +146,7 @@ nav a:hover { color: var(--ambar-claro); }
 nav a:hover::after { width: 100%; }
 
 
-/* -- Botón de accesibilidad
-   Aumenta el font-size del html con JS, lo que escala
-   todos los textos en rem proporcionalmente. */
+/* -- Botón de accesibilidad*/
 #btnFuente {
   background: transparent;
   border: 2px solid var(--ambar);
@@ -178,13 +166,11 @@ nav a:hover::after { width: 100%; }
 }
 
 
-/* -- Sección CTA Marcas
-   El bloque negro con el título grande y el botón "Ver marcas".
-   Los dos radial-gradient del ::before son el efecto de luz de fondo. */
+/* -- Sección CTA Marcas */
 .marcas-home {
   text-align: center;
   padding: 90px 20px;
-  background: var(--negro);
+  background: var(--crema);
   position: relative;
   overflow: hidden;
 }
@@ -203,26 +189,26 @@ nav a:hover::after { width: 100%; }
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--blanco);
+  color: var(--negro);
   margin-bottom: 14px;
   position: relative;
 }
 .marcas-home h2::after { display: none; }
 
-/* La palabra en ámbar dentro del h2 ("marcas") */
+/* La palabra en ambar ("marcas") dentro del h2 */
 .marcas-home h2 em {
   color: var(--ambar);
   font-style: normal;
 }
 
 .marcas-home p {
-  color: #888;
+  color:var(--gris-medio);
   font-size: 1rem;         /* 16px */
   margin-bottom: 40px;
   position: relative;
 }
 
-/* Botón principal con gradiente ámbar-dorado y sombra de color */
+/* Botón principal */
 .btn-marcas {
   display: inline-flex;
   align-items: center;
@@ -248,14 +234,11 @@ nav a:hover::after { width: 100%; }
 }
 
 
-/* -- Sección Servicios
-   Grid responsivo que acomoda las tarjetas automáticamente
-   según el ancho disponible. Cada tarjeta tiene borde izquierdo
-   que aparece en hover. */
+/* -- Sección Servicios */
 .servicios {
   padding: 90px 20px;
   text-align: center;
-  background: var(--crema);
+  background: var(--carbon);
 }
 
 .servicios ul {
@@ -267,7 +250,8 @@ nav a:hover::after { width: 100%; }
 }
 
 .servicios ul li {
-  background: var(--blanco);
+  background: var(--gris-oscuro);
+  color: var(--blanco);
   padding: 24px 22px;
   border-radius: var(--radio);
   box-shadow: var(--sombra-suave);
@@ -294,10 +278,7 @@ nav a:hover::after { width: 100%; }
   margin-top: 2px;
 }
 
-
-/* -- Sección Reseñas
-   Fondo negro con tarjetas oscuras. El ::before de cada tarjeta
-   es la comilla decorativa grande semitransparente. */
+/* -- Sección Reseñas */
 .resenas {
   padding: 90px 20px;
   text-align: center;
@@ -350,7 +331,7 @@ nav a:hover::after { width: 100%; }
   border-color: var(--ambar);
   transform: translateY(-5px);
 }
-/* Comilla decorativa grande en la esquina superior izquierda */
+/* Comilla decorativa  */
 .resena-card::before {
   content: '"';
   font-size: 5rem;         /* 80px */
@@ -382,8 +363,7 @@ nav a:hover::after { width: 100%; }
 
 
 /* -- Sección FAQ
-   Acordeón hecho con CSS y JS puro. max-height: 0 con transición
-   es el truco para animar la apertura sin JS de altura. */
+   Acordeón hecho con CSS y JS */
 .faq {
   padding: 90px 20px;
   background: var(--gris-claro);
@@ -425,7 +405,6 @@ nav a:hover::after { width: 100%; }
 }
 .faq-pregunta:hover { background: #fdf9f0; }
 
-/* El ícono + que rota 45° para convertirse en × al abrir */
 .faq-icon {
   color: var(--ambar);
   font-size: 1rem;         /* 16px */
@@ -450,9 +429,7 @@ nav a:hover::after { width: 100%; }
 }
 
 
-/* -- Sección Contacto
-   Tres tarjetas con ícono, fondo oscuro sobre negro.
-   El ::before es el efecto de luz sutil desde abajo. */
+/* -- Sección Contacto */
 #contacto {
   padding: 90px 20px;
   text-align: center;
@@ -531,23 +508,20 @@ nav a:hover::after { width: 100%; }
 .contacto-card:hover p { background: none; transform: none; }
 
 
-/* -- Footer
-   Simple y limpio. El span es el nombre de la empresa en ámbar. */
-footer {
-  background: #090909;
-  color: #555;
+/* -- Footer*/
+  footer {
+  background: linear-gradient(135deg, var(--ambar) 0%, var(--ambar) 100%);
+  color:var(--blanco);
   text-align: center;
   padding: 28px 20px;
   font-size: 0.8125rem;    /* 13px */
   letter-spacing: 0.5px;
-  border-top: 2px solid var(--ambar);
+  border-top: 2px solid var(--dorado);
 }
-footer span { color: var(--ambar); font-weight: 700; }
+footer span { color: var(--negro); font-weight: 700; }
 
 
-/* -- Botones flotantes
-   WhatsApp fijo abajo a la derecha. Al hacer click abre un menú
-   con los dos asesores. Facebook flota encima del botón de WhatsApp. */
+/* -- Botones flotantes*/
 .wsp-float {
   position: fixed;
   bottom: 24px; right: 24px;
@@ -574,7 +548,6 @@ footer span { color: var(--ambar); font-weight: 700; }
   box-shadow: 0 8px 24px rgba(37,211,102,0.5);
 }
 
-/* El menú se muestra/oculta con la clase .show que agrega botones.js */
 .wsp-menu {
   display: none;
   flex-direction: column;
@@ -620,50 +593,25 @@ footer span { color: var(--ambar); font-weight: 700; }
 }
 
 
-/* -- Animaciones
-   fadeUp es la entrada escalonada de las tarjetas de productos.
-   El delay se aplica inline desde marca.js. */
+/* -- Animaciones*/
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 
-/* -- Responsive 768px
-   En tablets el navbar apila verticalmente, el grid de reseñas
-   pasa a una columna y las tarjetas de contacto se apilan. */
-@media (max-width: 768px) {
-  nav { flex-direction: column; height: auto; padding: 14px 20px; gap: 12px; }
-  nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
-  .marcas-home h2 { font-size: 2rem; }        /* 32px */
-  .resenas-grid { grid-template-columns: 1fr; }
-  .contacto-cards { flex-direction: column; }
-  .servicios ul li { font-size: 0.875rem; }   /* 14px */
-  .faq-lista { max-width: 95%; }
-}
-
-/* -- Responsive 480px
-   En móviles pequeños los títulos y botones reducen un poco más. */
-@media (max-width: 480px) {
-  .section-title { font-size: 1.625rem; }     /* 26px */
-  .btn-marcas { padding: 14px 28px; font-size: 0.875rem; } /* 14px */
-}
-
-
-/* -- Sección Video
-   El aspect-ratio 16/9 mantiene las proporciones del iframe
-   sin importar el ancho de pantalla. */
+/* -- Sección Video */
 .video-seccion {
   padding: 90px 20px;
-  background: var(--negro);
+  background: var(--crema);
   text-align: center;
 }
 
 .video-seccion h2 {
-  color: var(--blanco);
+  color: var(--negro);
 }
 .video-seccion .section-sub {
-  color: #888;
+  color: var(--gris-medio);
 }
 
 .video-wrapper {
@@ -672,13 +620,13 @@ footer span { color: var(--ambar); font-weight: 700; }
   max-width: 860px;
   margin: 0 auto;
   border-radius: var(--radio);
+  border-color: #d4c9b0;
   overflow: hidden;
   box-shadow: 0 24px 64px rgba(0,0,0,0.55);
   border: 2px solid #2a2a2a;
   aspect-ratio: 16 / 9;
 }
 
-/* El iframe se posiciona absolute para llenar el contenedor 16/9 */
 .video-wrapper iframe,
 .video-wrapper video {
   position: absolute;
@@ -694,9 +642,7 @@ footer span { color: var(--ambar); font-weight: 700; }
 }
 
 
-/* -- Sección Mapa
-   El mapa de Google Maps embebido con un header decorativo.
-   En hover el borde se vuelve ámbar y el filtro de grises desaparece. */
+/* -- Sección Mapa */
 .mapa-seccion {
   background: var(--negro);
   padding: 0 20px 70px;
@@ -719,7 +665,7 @@ footer span { color: var(--ambar); font-weight: 700; }
   box-shadow: 0 28px 70px rgba(245,166,35,0.15);
 }
 
-/* Barra superior del mapa con ícono y texto */
+/* --Barra superior del mapa con ícono y texto */
 .mapa-header {
   background: var(--carbon);
   border-bottom: 2px solid var(--ambar);
@@ -731,18 +677,18 @@ footer span { color: var(--ambar); font-weight: 700; }
 
 .mapa-header i {
   color: var(--ambar);
-  font-size: 1rem;         /* 16px */
+  font-size: 1rem;        
 }
 
 .mapa-header span {
-  font-size: 0.8125rem;    /* 13px */
+  font-size: 0.8125rem;   
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #ccc;
 }
 
-/* Filtro de grises suave que se quita al hacer hover en el wrapper */
+/* --Filtro de grises suave que se quita al hacer hover en el wrapper */
 .mapa-frame {
   width: 100%;
   height: 380px;
@@ -758,4 +704,21 @@ footer span { color: var(--ambar); font-weight: 700; }
 
 @media (max-width: 768px) {
   .mapa-frame { height: 260px; }
+}
+
+/* -- Responsive 768px */
+@media (max-width: 768px) {
+  nav { flex-direction: column; height: auto; padding: 14px 20px; gap: 12px; }
+  nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .marcas-home h2 { font-size: 2rem; }        /* 32px */
+  .resenas-grid { grid-template-columns: 1fr; }
+  .contacto-cards { flex-direction: column; }
+  .servicios ul li { font-size: 0.875rem; }   /* 14px */
+  .faq-lista { max-width: 95%; }
+}
+
+/* -- Responsive 480px */
+@media (max-width: 480px) {
+  .section-title { font-size: 1.625rem; }     /* 26px */
+  .btn-marcas { padding: 14px 28px; font-size: 0.875rem; } /* 14px */
 }
