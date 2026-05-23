@@ -1,11 +1,17 @@
 /* CATALOGO
-   Estilos de catalogo.html y también de marca.html,
-   porque comparten el buscador y algunas tarjetas.
-   Si tocas algo acá revisa que no se rompa en las dos páginas. */
+   Estilos de catalogo.html y también de marca.html,comparten el buscador y algunas tarjetas */
 
+/*-- Navbar */
 
-/* -- Sección catálogo
-   El bloque principal con el grid de marcas y el buscador. */
+nav a[href="index.html"] {
+  color: var(--blanco);
+}
+
+nav a[href="index.html"]:hover {
+  color: var(--ambar-claro);
+}
+
+/* -- Sección catálogo */
 .catalogo {
   text-align: center;
   padding: 60px 20px;
@@ -19,9 +25,7 @@
 }
 
 
-/* -- Grid de marcas
-   Tres columnas fijas que se reducen a dos y luego a una
-   en los breakpoints de responsive. */
+/* -- Grid de marcas*/
 .marcas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -32,9 +36,7 @@
 }
 
 
-/* -- Tarjeta de marca
-   Al hacer hover sube, agrega borde ámbar y muestra
-   la franja "Ver productos →" que sube desde abajo con translateY. */
+/* -- Tarjeta de marca*/
 .marca {
   background: var(--blanco);
   padding: 20px;
@@ -86,9 +88,7 @@
 }
 
 
-/* -- Resultados del buscador global
-   Grid de dos columnas que muestra las baterías encontradas
-   en todas las marcas al mismo tiempo. */
+/* -- Resultados del buscador global*/
 .productos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -97,7 +97,7 @@
   margin-top: 20px;
 }
 
-/* Tarjeta de resultado de búsqueda */
+/* Tarjetas de resultado de búsqueda */
 .bateria {
   background: var(--blanco);
   width: 240px;
@@ -125,10 +125,7 @@
   color: var(--negro);
 }
 
-
-/* -- Buscador global
-   El input y botón centrados. El borde del input se vuelve
-   ámbar al hacer focus con un glow suave. */
+/* -- Buscador global */
 .buscador {
   display: flex;
   flex-direction: column;
@@ -185,10 +182,7 @@
 }
 
 
-/* -- Responsive 768px
-   El grid de marcas pasa de 3 a 2 columnas.
-   Los resultados del buscador pasan a una columna.
-   El input ocupa casi todo el ancho. */
+/* -- Responsive 768px */
 @media (max-width: 768px) {
   .marcas-grid { grid-template-columns: repeat(2, 1fr); }
   .productos { grid-template-columns: 1fr; }
@@ -196,8 +190,7 @@
   .buscador input { width: 80%; }
 }
 
-/* -- Responsive 480px
-   En móviles pequeños el grid de marcas pasa a una sola columna. */
+/* -- Responsive 480px */
 @media (max-width: 480px) {
   .marcas-grid { grid-template-columns: 1fr; }
 }

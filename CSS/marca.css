@@ -1,16 +1,13 @@
 /* MARCA
-   Estilos exclusivos de marca.html.
-   --marca-color se sobreescribe dinámicamente desde JS
-   según la marca que el usuario seleccionó en el catálogo. */
+   --marca-color se sobreescribe dinámicamente desde JS */
 
 
 /* -- Hero de marca
    El bloque negro de arriba con el logo grande, el nombre
-   y la descripción de la marca. El borde inferior usa --marca-color
-   que JS cambia según la marca activa. */
+   y la descripción de la marca. */
 .marca-hero {
   background: var(--negro);
-  padding: 50px 30px;
+  padding: 20px 20px;
   display: flex;
   justify-content: center;
   border-bottom: 4px solid var(--marca-color);
@@ -38,26 +35,26 @@
 }
 
 .marca-hero-text h1 {
-  font-size: 2.25rem;      /* 36px */
-  color: #fff;
+  font-size: 1.70rem;      /* 36px */
+  color: var(--blanco);
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
 .marca-descripcion {
-  color: #ccc;
+  color: var(--blanco);
   font-size: 0.9375rem;    /* 15px */
   max-width: 560px;
   line-height: 1.6;
   margin-bottom: 14px;
 }
 
-/* Pastilla con la cantidad de productos de la marca */
+/* "boton" con la cantidad de productos de la marca */
 .marca-badge {
   display: inline-block;
   background: var(--marca-color);
-  color: var(--negro);
+  color: var(--blanco);
   font-weight: 700;
   font-size: 0.8125rem;    /* 13px */
   padding: 5px 16px;
@@ -67,21 +64,22 @@
 
 
 /* -- Buscador local
-   El input para filtrar productos dentro de la marca activa.
-   La lógica está en filtrarLocal() dentro de marca.js. */
+   lógica en filtrarLocal() dentro de marca.js. */
 .buscador-marca {
-  background: #fff;
+  background: var(--crema);
   padding: 30px 20px;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--crema);
+}
+
+.buscador h2{
+  color: var(--negro);
 }
 
 
-/* -- Grid de productos
-   auto-fill con minmax hace que las columnas se ajusten solas
-   al ancho disponible sin necesidad de media queries extra. */
+/* -- Grid de productos. */
 .catalogo-marca {
   padding: 50px 30px;
-  background: var(--gris-claro);
+  background: var(--crema);
 }
 
 .productos-marca-grid {
@@ -93,15 +91,13 @@
 }
 
 
-/* -- Tarjeta de producto
-   Al hacer click abre el modal con los specs completos.
-   El animation-delay se aplica inline desde marca.js
-   para el efecto de entrada escalonada. */
+/* -- Tarjeta de producto*/
 .prod-card {
-  background: #fff;
+  background: var(--carbon);
+  boder: 1px solid #2a2a2a;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: var(--sombra-suave);
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   animation: fadeUp 0.45s ease both;
@@ -110,13 +106,14 @@
 }
 
 .prod-card:hover {
+  border-color: var(--ambar);
   transform: translateY(-8px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.14);
+  box-shadow: var(--sombra-media);
 }
 
-/* Contenedor de la imagen con borde inferior del color de la marca */
+/* imagen de la tarjeta */
 .prod-img-wrap {
-  background: #f8f8f8;
+  background: var(--gris-suave);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,13 +145,13 @@
 .prod-info h3 {
   font-size: 1rem;         /* 16px */
   font-weight: 700;
-  color: var(--negro);
+  color: var(--blanco);
   margin-bottom: 8px;
 }
 
 .prod-info p {
   font-size: 0.8125rem;    /* 13px */
-  color: #666;
+  color: var(--blanco);
   line-height: 1.5;
   flex: 1;
   margin-bottom: 12px;
@@ -169,14 +166,15 @@
 }
 
 .prod-specs span {
-  background: var(--gris-claro);
+  background: var(--negro);
   font-size: 0.75rem;      /* 12px */
   padding: 4px 10px;
   border-radius: 6px;
-  color: var(--negro);
+  border: 1px solid #2a2a2a;
+  color: var(--blanco);
 }
 
-/* Botón "Ver detalles" con el color de la marca activa */
+/* Botón "Ver detalles" con el color de la marca */
 .btn-ver {
   background: var(--marca-color);
   border: none;
@@ -198,13 +196,12 @@
   transform: translateX(3px);
 }
 
-
 /* -- Sin resultados
    Se muestra cuando el buscador local no encuentra nada. */
 .sin-resultados {
   text-align: center;
   font-size: 1.125rem;     /* 18px */
-  color: #999;
+  color: #444;
   padding: 60px 0;
   display: flex;
   flex-direction: column;
@@ -214,14 +211,12 @@
 
 .sin-resultados i {
   font-size: 2.5rem;       /* 40px */
-  color: #ccc;
+  color: #444;
 }
 
 
-/* -- Modal
-   Se activa con la clase .active. El backdrop-filter da el efecto
-   de desenfoque del fondo. Se cierra con el botón X, haciendo click
-   en el overlay, o presionando Escape. */
+/* -- Modal 
+  da el efecto de desenfoque del fondo. */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -240,8 +235,9 @@
 }
 
 .modal-card {
-  background: #fff;
+  background: var(--carbon);
   border-radius: 20px;
+  border: 1px solid #2a2a2a;
   max-width: 720px;
   width: 100%;
   display: flex;
@@ -257,7 +253,8 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  background: #f0f0f0;
+  background: var(--gris-oscuro);
+  color: var(--blanco);
   border: none;
   width: 36px;
   height: 36px;
@@ -273,13 +270,13 @@
 
 .modal-close:hover { background: #ddd; }
 
-/* Imagen del producto ocupa el 45% izquierdo del modal */
+/* Imagen del producto*/
 .modal-card img {
   width: 45%;
   object-fit: contain;
-  background: #f5f5f5;
+  background: var(--carbon);
   padding: 30px;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #3a3a3a;
   flex-shrink: 0;
 }
 
@@ -293,20 +290,19 @@
 .modal-info h2 {
   font-size: 1.375rem;     /* 22px */
   font-weight: 700;
-  color: var(--negro);
+  color: var(--blanco);
   margin-bottom: 10px;
 }
 
 .modal-info > p {
   font-size: 0.875rem;     /* 14px */
-  color: #666;
+  color: var(--blanco);
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 
-/* -- Tabla de specs del modal
-   Cada fila tiene clave a la izquierda en gris y valor a la derecha en negro. */
+/* -- Tabla de specs del modal*/
 .modal-specs {
   display: flex;
   flex-direction: column;
@@ -318,18 +314,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #3a3a3a;
   padding-bottom: 8px;
   font-size: 0.875rem;     /* 14px */
 }
 
 .spec-key {
-  color: #999;
+  color: var(--blanco);
   font-weight: 600;
 }
 
 .spec-val {
-  color: var(--negro);
+  color: var(--blanco);
   font-weight: 700;
 }
 
@@ -356,10 +352,7 @@
 }
 
 
-/* -- Responsive 768px
-   El hero apila logo y texto verticalmente.
-   El grid de productos pasa a dos columnas.
-   El modal se reorganiza de horizontal a vertical. */
+/* -- Responsive 768px */
 @media (max-width: 768px) {
   .marca-hero-content {
     flex-direction: column;
@@ -391,8 +384,7 @@
   }
 }
 
-/* -- Responsive 480px
-   En móviles pequeños el grid pasa a una sola columna. */
+/* -- Responsive 480px */
 @media (max-width: 480px) {
   .productos-marca-grid { grid-template-columns: 1fr; }
 }
