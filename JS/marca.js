@@ -223,8 +223,8 @@ const todoProductos = [
 
   // -- BOSCH
   {
-    nombre: "BOSCH NS40-800 ",
-    img: "IMG/BOSCH/BOSCH-NS40-800.jpg",
+    nombre: "BOSCH NS60-800 ",
+    img: "IMG/BOSCH/BOSCH-NS60-800.jpg",
     marca: "bosch",
     descripcion: "Confiabilidad Bosch en cada arranque. Compatible con carros livianos.",
     specs: { "Amperaje": "800 AMP", "CCA": "420 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
@@ -244,74 +244,103 @@ const todoProductos = [
     specs: { "Amperaje": "700 AMP", "CCA": "330 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "BOSCH 42-960",
-    img: "IMG/BOSCH/BOSCH-42-960.jpg",
+    nombre: "BOSCH 42-970",
+    img: "IMG/BOSCH/BOSCH-42-970.jpg",
     marca: "bosch",
     descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
-    specs: { "Amperaje": "960 AMP", "CCA": "400 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "970 AMP", "CCA": "560 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "BOSCH EFB-LN2",
     img: "IMG/BOSCH/BOSCH-EFB-LN2.jpg",
     marca: "bosch",
     descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
-    specs: { "Amperaje": "60 Ah", "CCA": "540 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "60 Ah", "CCA": "560 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "BOSCH L3N-AGM",
+    nombre: "BOSCH AGM L3N",
     img: "IMG/BOSCH/BOSCH-L3N-AGM.jpg",
     marca: "bosch",
     descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
-    specs: { "Amperaje": "60 Ah", "CCA": "540 A", "Garantía": "24 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "70 Ah", "CCA": "760 A", "Garantía": "24 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "BOSCH LN4-AGM",
-    img: "IMG/BOSCH/BOSCH-LN4-AGM.jpg",
+    nombre: "BOSCH AGM L4-80",
+    img: "IMG/BOSCH/BOSCH-L4-AGM.jpg",
     marca: "bosch",
     descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
-    specs: { "Amperaje": "60 Ah", "CCA": "540 A", "Garantía": "24 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "80 Ah", "CCA": "800 A", "Garantía": "24 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- HELLA
   {
-    nombre: "HELLA 60Ah Premium",
-    img: "IMG/HELLA/HELLA.jpg",
+    nombre: "HELLA 36-700",
+    img: "IMG/HELLA/HELLA-36-700.jpg",
     marca: "hella",
     descripcion: "Batería premium con resistencia superior a vibraciones y altas temperaturas.",
-    specs: { "Amperaje": "60 Ah", "CCA": "600 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "44 Ah", "CCA": "390 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "HELLA 60Ah Premium",
-    img: "IMG/HELLA/HELLA.jpg",
+    nombre: "HELLA 42-900",
+    img: "IMG/HELLA/HELLA-42-900.jpg",
     marca: "hella",
     descripcion: "Batería premium con resistencia superior a vibraciones y altas temperaturas.",
-    specs: { "Amperaje": "60 Ah", "CCA": "600 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "55 Ah", "CCA": "550 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "HELLA 60Ah Premium",
-    img: "IMG/HELLA/HELLA.jpg",
+    nombre: "HELLA 35-65 950",
+    img: "IMG/HELLA/HELLA-35-65-950.jpg",
     marca: "hella",
     descripcion: "Batería premium con resistencia superior a vibraciones y altas temperaturas.",
-    specs: { "Amperaje": "60 Ah", "CCA": "600 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "60 Ah", "CCA": "660 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- ALPHALINE
   {
-    nombre: "ALPHALINE X 55Ah",
-    img: "IMG/ALPHALINE/ALPHALINE.jpg",
+    nombre: "ALPHALINE NS40-670",
+    img: "IMG/ALPHALINE/ALPHALINE-NS40-670.jpg",
     marca: "alphaline",
     descripcion: "Solución económica sin sacrificar calidad. Ideal para taxis y vehículos de uso diario.",
-    specs: { "Amperaje": "55 Ah", "CCA": "500 A", "Garantía": "12 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "35 Ah", "CCA": "330 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "ALPHALINE 42-850",
+    img: "IMG/ALPHALINE/ALPHALINE-42-850.jpg",
+    marca: "alphaline",
+    descripcion: "Solución económica sin sacrificar calidad. Ideal para taxis y vehículos de uso diario.",
+    specs: { "Amperaje": "54 Ah", "CCA": "480 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "ALPHALINE 27-1150",
+    img: "IMG/ALPHALINE/ALPHALINE-27-1150.jpg",
+    marca: "alphaline",
+    descripcion: "Solución económica sin sacrificar calidad. Ideal para taxis y vehículos de uso diario.",
+    specs: { "Amperaje": "90 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- HANKOOK
   {
-    nombre: "HANKOOK MF 75Ah",
-    img: "IMG/HANKOOK/HANKOOK.jpg",
+    nombre: "HANKOOK NS60-850 EFB",
+    img: "IMG/HANKOOK/HANKOOK-NS60-850-EFB.jpg",
     marca: "hankook",
-    descripcion: "Batería sellada libre de mantenimiento, larga vida útil para uso intensivo.",
-    specs: { "Amperaje": "75 Ah", "CCA": "680 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
-  }
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "HANKOOK 65-1250",
+    img: "IMG/HANKOOK/HANKOOK-65-1250.jpg",
+    marca: "hankook",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "1250 AMP", "CCA": "750 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "HANKOOK 48-1300",
+    img: "IMG/HANKOOK/HANKOOK-48-1300.jpg",
+    marca: "hankook",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "70 Ah", "CCA": "650 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+
 ];
 
 
