@@ -343,29 +343,159 @@ const todoProductos = [
 
   // -- DGP
   {
-    nombre: "DGP",
-    img: "IMG/DGP/DGP.jpg",
+    nombre: "DGP 48-1000 ",
+    img: "IMG/DGP/DGP-48-1000.jpg",
     marca: "dgp",
     descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
-    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "68 Ah", "CCA": "600 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+   {
+    nombre: "DGP 36-750",
+    img: "IMG/DGP/DGP-36-750.jpg",
+    marca: "dgp",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "45 Ah AMP", "CCA": "420 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+   {
+    nombre: "DGP 35-1000",
+    img: "IMG/DGP/DGP-35-1000.jpg",
+    marca: "dgp",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "60 Ah", "CCA": "510 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
    // -- ACDELCO
   {
-    nombre: "ACDELCO",
-    img: "IMG/ACDELCO/ACDELCO.jpg",
+    nombre: "ACDELCO LINEA DORADA NS60-700",
+    img: "IMG/ACDELCO/ACDELCO-NS60-700.jpg",
     marca: "acdelco",
     descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
-    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "45 Ah", "CCA": "430 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "ACDELCO LINEA ROJA NS60-650",
+    img: "IMG/ACDELCO/ACDELCO-NS60-650.jpg",
+    marca: "acdelco",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "45 Ah", "CCA": "430 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "ACDELCO LINEA DORADA 47R-850",
+    img: "IMG/ACDELCO/ACDELCO-47R-850.jpg",
+    marca: "acdelco",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "62 Ah", "CCA": "550 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "ACDELCO LINEA DORADA 34R-1050",
+    img: "IMG/ACDELCO/ACDELCO-34R-1050.jpg",
+    marca: "acdelco",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "69 Ah", "CCA": "740 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
+  // --VELKO
+  {
+    nombre: "VELKO NS40-600",
+    img: "IMG/VELKO/VELKO.jpg",
+    marca: "velko",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "36 Ah", "CCA": "330 A", "Garantía": "12 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "VELKO 47-850",
+    img: "IMG/VELKO/VELKO-47-850.jpg",
+    marca: "velko",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "60 Ah", "CCA": "450 A", "Garantía": "12 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "VELKO NOMIKS NS40-600",
+    img: "IMG/VELKO/VELKO-NOMIKS-NS40-600.jpg",
+    marca: "velko",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "40 Ah", "CCA": "376 A", "Garantía": "12 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+
+  // --COEXITO
+  {
+    nombre: "COEXITO PLATINIUM 34-850",
+    img: "IMG/COEXITO/COEXITO-PL-34-850.jpg",
+    marca: "coexito",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "850 AMP", "CCA": "500 A", "Garantía": "12 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  
   // -- MAGNA - MOTO
   {
-    nombre: "MAGNA",
-    img: "IMG/MAGNA/MAGNA.jpg",
+    nombre: "MAGNA ULTRA GEL MAGX4L-BS",
+    img: "IMG/MAGNA/MAGNA-GEL-MAGX4L-BS.jpg",
     marca: "magna",
     descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
-    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "4 Ah", "CCA": "45 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+   {
+    nombre: "MAGNA ULTRA GEL MAGX5L-BS",
+    img: "IMG/MAGNA/MAGNA-GEL-MAGX5L-BS.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "5 Ah", "CCA": "70 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+   {
+    nombre: "MAGNA ULTRA GEL-YB5LB",
+    img: "IMG/MAGNA/MAGNA-GEL-GEL-YB5LB.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "5.2 Ah", "CCA": "65 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA ULTRA GEL-YB6.5LB",
+    img: "IMG/MAGNA/MAGNA-GEL-GEL-YB6.5LB.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "6.5 Ah", "CCA": "75 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA ULTRA GEL MAGX9-BS",
+    img: "IMG/MAGNA/MAGNA-GEL-MAGX9-BS.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "9 Ah", "CCA": "120 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA ULTRA GEL MAGX7L-BS",
+    img: "IMG/MAGNA/MAGNA-GEL-MAGX7L-BS.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "7 Ah", "CCA": "85 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA ULTRA GEL MAGX7A-BS",
+    img: "IMG/MAGNA/MAGNA-GEL-MAGX7A-BS.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "7.5 Ah", "CCA": "90 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA MF-YB7B-B",
+    img: "IMG/MAGNA/MAGNA-MF-YB7B-B.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "7.2 Ah", "CCA": "75 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA ULTRA GEL YT7B-BS",
+    img: "IMG/MAGNA/MAGNA-GEL-YT7B-BS.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "6.5 Ah", "CCA": "95 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "MAGNA MF-12N7B-3A",
+    img: "IMG/MAGNA/MAGNA-MF-12N7B-3A.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "7.2 Ah", "CCA": "75 A", "Garantía": "6 meses", "Tipo": "Sellada, libre de mantenimiento" }
   }
 
 ];
@@ -384,8 +514,10 @@ const infoMarcas = {
   alphaline: { nombre: "ALPHALINE", logo: "IMG/ALPHALINE/ALPHALINE.jpg", desc: "Baterías de origen coreano con excelente desempeño a precio accesible.",                                         color: "#f5a623" },
   hankook:   { nombre: "HANKOOK",   logo: "IMG/HANKOOK/HANKOOK.jpg",     desc: "Fabricante coreano con alta tecnología MF para vehículos de alto rendimiento.",                                  color: "#f5a623" },
   dgp:       { nombre: "DGP",       logo: "IMG/DGP/DGP.jpg",             desc: "Marca coreana fundada en 1944, con tecnología X-FRAME libre de mantenimiento para vehículos livianos y pesados.", color: "#f5a623" },
-  acdelco:   { nombre: "ACDELCO",   logo: "IMG/ACDELCO/ACDELCO.jpg",     desc: "Marca original de General Motors con más de 100 años de experiencia y presencia en más de 100 países, ideal para vehículos livianos y pesados.", color: "#f5a623" },
-  magna:     { nombre: "MAGNA",   logo: "IMG/MAGNA/MAGNA.jpg",           desc: "Marca colombiana especializada en baterías para motocicletas, respaldada por COEXITO S.A.S., la red más grande de distribución de baterías y autopartes del país.", color: "#f5a623" }
+  acdelco:   { nombre: "ACDELCO",   logo: "IMG/ACDELCO/ACDELCO.jpg",     desc: "Marca original de General Motors con más de 100 años de experiencia y presencia en más de 100 países, ideal para vehículos livianos y pesados.",      color: "#f5a623" },
+  magna:     { nombre: "MAGNA",     logo: "IMG/MAGNA/MAGNA.jpg",         desc: "Marca colombiana especializada en baterías para motocicletas, respaldada por COEXITO S.A.S., la red más grande de distribución de baterías y autopartes del país.",       color: "#f5a623" },
+  velko:     { nombre: "VELKO",     logo: "IMG/VELKO/VELKO.jpg",         desc: "Baterías con tecnología americana, destacadas por su resistencia a la corrosión y a las altas temperaturas, para vehículos livianos y pesados.",      color: "#f5a623" },
+  coexito:   { nombre: "COEXITO",   logo: "IMG/COEXITO/COEXITO.jpg",     desc: "Marca original de General Motors con más de 100 años de experiencia, ideal para vehículos livianos y pesados en más de 100 países. ",              color: "#f5a623" }
 };
 
 
