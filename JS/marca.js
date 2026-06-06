@@ -341,6 +341,33 @@ const todoProductos = [
     specs: { "Amperaje": "70 Ah", "CCA": "650 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
+  // -- DGP
+  {
+    nombre: "DGP",
+    img: "IMG/DGP/DGP.jpg",
+    marca: "dgp",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+
+   // -- ACDELCO
+  {
+    nombre: "ACDELCO",
+    img: "IMG/ACDELCO/ACDELCO.jpg",
+    marca: "acdelco",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+
+  // -- MAGNA - MOTO
+  {
+    nombre: "MAGNA",
+    img: "IMG/MAGNA/MAGNA.jpg",
+    marca: "magna",
+    descripcion: "Marca coreana de llantas para todo tipo de vehículos: livianos, SUVs, eléctricos y de carga pesada.",
+    specs: { "Amperaje": "850 AMP", "CCA": "460 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  }
+
 ];
 
 
@@ -355,7 +382,10 @@ const infoMarcas = {
   bosch:     { nombre: "BOSCH",     logo: "IMG/BOSCH/BOSCH.jpg",         desc: "Confiabilidad y precisión alemana en cada producto. Una de las marcas más reconocidas del mundo.",              color: "#f5a623" },
   hella:     { nombre: "HELLA",     logo: "IMG/HELLA/HELLA.jpg",         desc: "Innovación en autopartes eléctricas con más de 125 años de experiencia.",                                        color: "#f5a623" },
   alphaline: { nombre: "ALPHALINE", logo: "IMG/ALPHALINE/ALPHALINE.jpg", desc: "Baterías de origen coreano con excelente desempeño a precio accesible.",                                         color: "#f5a623" },
-  hankook:   { nombre: "HANKOOK",   logo: "IMG/HANKOOK/HANKOOK.jpg",     desc: "Fabricante coreano con alta tecnología MF para vehículos de alto rendimiento.",                                  color: "#f5a623" }
+  hankook:   { nombre: "HANKOOK",   logo: "IMG/HANKOOK/HANKOOK.jpg",     desc: "Fabricante coreano con alta tecnología MF para vehículos de alto rendimiento.",                                  color: "#f5a623" },
+  dgp:       { nombre: "DGP",       logo: "IMG/DGP/DGP.jpg",             desc: "Marca coreana fundada en 1944, con tecnología X-FRAME libre de mantenimiento para vehículos livianos y pesados.", color: "#f5a623" },
+  acdelco:   { nombre: "ACDELCO",   logo: "IMG/ACDELCO/ACDELCO.jpg",     desc: "Marca original de General Motors con más de 100 años de experiencia y presencia en más de 100 países, ideal para vehículos livianos y pesados.", color: "#f5a623" },
+  magna:     { nombre: "MAGNA",   logo: "IMG/MAGNA/MAGNA.jpg",           desc: "Marca colombiana especializada en baterías para motocicletas, respaldada por COEXITO S.A.S., la red más grande de distribución de baterías y autopartes del país.", color: "#f5a623" }
 };
 
 
@@ -411,7 +441,7 @@ function renderProductos(lista) {
   grid.innerHTML = lista.map((p, i) => `
     <div class="prod-card" style="animation-delay:${i * 0.07}s" onclick="abrirModal(${todoProductos.indexOf(p)})">
       <div class="prod-img-wrap">
-        <img src="${p.img}" alt="${p.nombre}" onerror="this.src='IMG/DUNCAN/DUNCAN.jpg'">
+        <img src="${p.img}" alt="${p.nombre}" onerror="this.src='${info.logo}'">
       </div>
       <div class="prod-info">
         <h3>${p.nombre}</h3>
