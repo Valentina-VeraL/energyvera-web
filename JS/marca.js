@@ -6,7 +6,7 @@
 
 // -- Datos de productos
 // Todos los productos de todas las marcas estan aca
-// El buscador global de catalogo.js y las páginas individuales
+// El buscador global de catalogo.js y las paginas individuales
 // de cada marca se forman parte de este mismo array.
 const todoProductos = [
 
@@ -23,7 +23,7 @@ const todoProductos = [
     img: "IMG/MAC/MAC-SP-36-800.jpg",
     marca: "mac",
     descripcion: "Línea superior, confiable para uso diario, ideal para la mayoría de vehículos familiares y urbanos.",
-    specs: { "Amperaje": "75 Ah", "CCA": "420 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "800 AMP", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MAC SILVER PLUS 42-850",
@@ -37,49 +37,49 @@ const todoProductos = [
     img: "IMG/MAC/MAC-SP-47-950.jpg",
     marca: "mac",
     descripcion: "Línea superior, confiable para uso diario, ideal para la mayoría de vehículos familiares y urbanos.",
-    specs: { "Amperaje": "47 AMP", "CCA": "550 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "950 AMP", "CCA": "550 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MAC SILVER PLUS 48-1000",
     img: "IMG/MAC/MAC-SP-48-1000.jpg",
     marca: "mac",
     descripcion: "Línea superior, confiable para uso diario, ideal para la mayoría de vehículos familiares y urbanos.",
-    specs: { "Amperaje": "1000 A", "CCA": "550 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1000 AMP", "CCA": "550 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MAC SILVER PLUS 27-1140",
     img: "IMG/MAC/MAC-SP-27-1140.jpg",
     marca: "mac",
     descripcion: "Línea superior, confiable para uso diario, ideal para la mayoría de vehículos familiares y urbanos.",
-    specs: { "Amperaje": "48 Ah", "CCA": "1100 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1140 AMP", "CCA": "640 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "MAC SILVER PLUS 30H-1300",
-    img: "IMG/MAC/MAC-SP-30H-1300.jpg",
+    nombre: "MAC SILVER PLUS 31H-1300",
+    img: "IMG/MAC/MAC-SP-31H-1300.jpg",
     marca: "mac",
     descripcion: "Línea superior, confiable para uso diario, ideal para la mayoría de vehículos familiares y urbanos.",
-    specs: { "Amperaje": "48 Ah", "CCA": "1100 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1300 AMP", "CCA": "800 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MAC GOLD PLUS L1-900",
     img: "IMG/MAC/MAC-GP-L1-900.jpg",
     marca: "mac",
     descripcion: "Línea premium, diseñada para vehículos con mayor demanda eléctrica.",
-    specs: { "Amperaje": "48 Ah", "CCA": "1100 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "900 AMP", "CCA": "550 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MAC GOLD PLUS 42-1000",
     img: "IMG/MAC/MAC-GP-42-1000.jpg",
     marca: "mac",
     descripcion: "Línea premium, diseñada para vehículos con mayor demanda eléctrica.",
-    specs: { "Amperaje": "48 Ah", "CCA": "1100 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1000 AMP", "CCA": "550 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MAC GOLD PLUS 34-1200",
     img: "IMG/MAC/MAC-GP-34-1200.jpg",
     marca: "mac",
     descripcion: "Línea premium, diseñada para vehículos con mayor demanda eléctrica.",
-    specs: { "Amperaje": "48 Ah", "CCA": "1100 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1200 AMP", "CCA": "680 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- DUNCAN
@@ -88,77 +88,70 @@ const todoProductos = [
     img: "IMG/DUNCAN/DCN-S40-670.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento para vehículos de demanda tradicional.",
-    specs: { "Amperaje": "670 Ah", "CCA": "350 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "670 AMP", "CCA": "350 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN NS60-750",
     img: "IMG/DUNCAN/DCN-NS60-750.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para carros livianos y camionetas.",
-    specs: { "Amperaje": "750 Ah", "CCA": "N/D", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "750 AMP", "CCA": "400 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 36-750",
     img: "IMG/DUNCAN/DCN-36-750.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para varios tipos de vehículos.",
-    specs: { "Amperaje": "750 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "750 AMP", "CCA": "350 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 42-850",
     img: "IMG/DUNCAN/DCN-42-850.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, adecuada para vehículos medianos y grandes.",
-    specs: { "Amperaje": "850 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "850 AMP", "CCA": "500 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 42-950",
     img: "IMG/DUNCAN/DCN-42-950.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, adecuada para vehículos medianos y grandes.",
-    specs: { "Amperaje": "950 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "950 AMP", "CCA": "600 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 35-1000",
     img: "IMG/DUNCAN/DCN-35-1000.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para camionetas.",
-    specs: { "Amperaje": "1000 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1000 AMP", "CCA": "570 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 27-1150",
     img: "IMG/DUNCAN/DCN-27-1150.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para vehículos pesados.",
-    specs: { "Amperaje": "1150 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1150 AMP", "CCA": "670 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "DUNCAN 24-1200",
-    img: "IMG/DUNCAN/DCN-24-1200.jpg",
+    nombre: "DUNCAN 24-1150",
+    img: "IMG/DUNCAN/DCN-24-1150.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para camionetas y vehículos pesados.",
-    specs: { "Amperaje": "1200 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
-  },
-  {
-    nombre: "DUNCAN 48-1200",
-    img: "IMG/DUNCAN/DCN-48-1200.jpg",
-    marca: "duncan",
-    descripcion: "Batería de alto rendimiento, ideal para camionetas y vehículos pesados.",
-    specs: { "Amperaje": "1200 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1150 AMP", "CCA": "670 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 30H-1250",
     img: "IMG/DUNCAN/DCN-30H-1250.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para vehículos pesados.",
-    specs: { "Amperaje": "1250 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1250 AMP", "CCA": "700 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "DUNCAN 49-1300",
     img: "IMG/DUNCAN/DCN-49-1300.jpg",
     marca: "duncan",
     descripcion: "Batería de alto rendimiento, ideal para vehículos pesados.",
-    specs: { "Amperaje": "1300 Ah", "CCA": "750 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1300 AMP", "CCA": "700 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- MOURA
@@ -167,21 +160,21 @@ const todoProductos = [
     img: "IMG/MOURA/MOU-36-750.jpg",
     marca: "moura",
     descripcion: "Tecnología brasileña, con polaridad derecha, perfecta para vehículos ligeros y pesados.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "750 AMP", "CCA": "430 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "MOURA 42-950",
     img: "IMG/MOURA/MOU-42-950.jpg",
     marca: "moura",
     descripcion: "Tecnología brasileña, con polaridad derecha, ideal para vehículos de uso diario, carros particulares y de trabajo.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "950 AMP", "CCA": "570 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
-    nombre: "MOURA 49-1200",
-    img: "IMG/MOURA/MOU-49-1200.jpg",
+    nombre: "MOURA 48-1200",
+    img: "IMG/MOURA/MOU-48-1200.jpg",
     marca: "moura",
     descripcion: "Tecnología brasileña, con polaridad derecha, perfecta para vehículos de carga.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1200", "CCA": "650 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- VARTA
@@ -190,54 +183,110 @@ const todoProductos = [
     img: "IMG/VARTA/VTA-36-780.jpg",
     marca: "varta",
     descripcion: "Batería con polaridad derecha, ideal para vehículos livianos.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "780 AMP", "CCA": "440 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "VARTA 42-870",
     img: "IMG/VARTA/VTA-42-870.jpg",
     marca: "varta",
     descripcion: "Batería de alto rendimiento, ideal para una amplia gama de vehículos.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "870 AMP", "CCA": "520 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "VARTA BLUE L2-900",
     img: "IMG/VARTA/VTA-BL-L2-900.jpg",
     marca: "varta",
     descripcion: "Batería con polaridad derecha, ideal para vehículos livianos.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "15 meses", "Tipo": "BLUE" }
+    specs: { "Amperaje": "900 AMP", "CCA": "550 A", "Garantía": "15 meses", "Tipo": "BLUE" }
   },
   {
     nombre: "VARTA 48-1200",
     img: "IMG/VARTA/VTA-48-1200.jpg",
     marca: "varta",
     descripcion: "Batería con polaridad derecha para arranque confiable. Perfecta para vehículos con elevado consumo eléctrico.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1200 AMP", "CCA": "660 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "VARTA BLUE 49-1250",
     img: "IMG/VARTA/VTA-BL-49-1250.jpg",
     marca: "varta",
     descripcion: "Batería con polaridad derecha, ideal para coches de gama media a alta y algunos vehículos tipo taxi o placa blanca.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1250 AMP", "CCA": "850 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
   {
     nombre: "VARTA 4D-1550",
     img: "IMG/VARTA/VTA-4D-1550.jpg",
     marca: "varta",
     descripcion: "Batería con polaridad derecha, indicada para vehículos de gran cilindraje, camiones, camionetas grandes y vehículos de lujo con alto consumo eléctrico.",
-    specs: { "Amperaje": "70 Ah", "CCA": "630 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+    specs: { "Amperaje": "1550 AMP", "CCA": "1060 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- BOSCH
   {
-    nombre: "BOSCH S4 60Ah",
-    img: "IMG/BOSCH/BOSCH.jpg",
+    nombre: "BOSCH NS40-800 ",
+    img: "IMG/BOSCH/BOSCH-NS40-800.jpg",
+    marca: "bosch",
+    descripcion: "Confiabilidad Bosch en cada arranque. Compatible con carros livianos.",
+    specs: { "Amperaje": "800 AMP", "CCA": "420 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "BOSCH 42-970",
+    img: "IMG/BOSCH/BOSCH-42-970.jpg",
+    marca: "bosch",
+    descripcion: "Confiabilidad Bosch en cada arranque. Compatible con carros livianos.",
+    specs: { "Amperaje": "970 AMP", "CCA": "560 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "BOSCH NS40-700",
+    img: "IMG/BOSCH/BOSCH-NS40-700.jpg",
+    marca: "bosch",
+    descripcion: "Confiabilidad Bosch en cada arranque. Compatible con carros livianos.",
+    specs: { "Amperaje": "700 AMP", "CCA": "330 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "BOSCH 42-960",
+    img: "IMG/BOSCH/BOSCH-42-960.jpg",
+    marca: "bosch",
+    descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
+    specs: { "Amperaje": "960 AMP", "CCA": "400 A", "Garantía": "15 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "BOSCH EFB-LN2",
+    img: "IMG/BOSCH/BOSCH-EFB-LN2.jpg",
+    marca: "bosch",
+    descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
+    specs: { "Amperaje": "60 Ah", "CCA": "540 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "BOSCH L3N-AGM",
+    img: "IMG/BOSCH/BOSCH-L3N-AGM.jpg",
+    marca: "bosch",
+    descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
+    specs: { "Amperaje": "60 Ah", "CCA": "540 A", "Garantía": "24 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "BOSCH LN4-AGM",
+    img: "IMG/BOSCH/BOSCH-LN4-AGM.jpg",
     marca: "bosch",
     descripcion: "Confiabilidad Bosch en cada arranque. Compatible con la mayoría de vehículos europeos y japoneses.",
     specs: { "Amperaje": "60 Ah", "CCA": "540 A", "Garantía": "24 meses", "Tipo": "Sellada, libre de mantenimiento" }
   },
 
   // -- HELLA
+  {
+    nombre: "HELLA 60Ah Premium",
+    img: "IMG/HELLA/HELLA.jpg",
+    marca: "hella",
+    descripcion: "Batería premium con resistencia superior a vibraciones y altas temperaturas.",
+    specs: { "Amperaje": "60 Ah", "CCA": "600 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
+  {
+    nombre: "HELLA 60Ah Premium",
+    img: "IMG/HELLA/HELLA.jpg",
+    marca: "hella",
+    descripcion: "Batería premium con resistencia superior a vibraciones y altas temperaturas.",
+    specs: { "Amperaje": "60 Ah", "CCA": "600 A", "Garantía": "18 meses", "Tipo": "Sellada, libre de mantenimiento" }
+  },
   {
     nombre: "HELLA 60Ah Premium",
     img: "IMG/HELLA/HELLA.jpg",
